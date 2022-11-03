@@ -1,0 +1,1447 @@
+﻿@*@{
+        ViewBag.Title = "HomePage";
+        Layout = "~/Views/Shared/_InvRegistrationLayout.cshtml";
+    }
+
+    <h2>HomePage</h2>*@
+
+
+@model LISFYPlatinumInvRegistration.Models.branchdetails
+@{
+    var Layouts = "~/Views/Shared/_CreateUserLayout.cshtml";
+}
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_homelayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("HomePage", "LISFY", FormMethod.Post, new { id = "form1", enctype = "multipart/from-data" }))
+{
+
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color:#428bca;color:white">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                        <i class="fas fa-bars" style="margin-top:8px;"></i>
+
+                    </a>
+                </li>
+                <h4 class="page-heading">
+                    <label class="page-heading" id="LabCorp_Name">
+                        @if (ViewBag.BrnchName != null)
+                        {
+                        @Html.Label((string)ViewBag.BrnchName)
+                        }
+                        else
+                        {
+                        @Html.Label("")
+                        }
+                    </label>
+                </h4>
+                @*<h4 class="page-heading">
+                        <img src="~/Content/LOGO.svg" />
+                    </h4>*@
+            </ul>
+
+            <ul class="navbar-nav ml-auto"></ul>
+        </nav>
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <a href="" class="brand-link">
+                @*<img src="~/Content/LOGO.svg" />*@
+                @*<img src="~/Content/HYGEA_SVG.svg" />*@
+                <span class="brand-text font-weight-light client-logo"><img src="~/Content/logintemplate/img/@(ViewBag.HomeImage)" alt="logo" width="230"></span>
+            </a>
+
+            <div class="sidebar" id="main">
+
+                <nav class="mt-2 ">
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" id="MainMenu" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item dropright" style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                                <p id="cng">Front Office <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" id="submenu" class="nav-link">Patient Registration</a>
+                                <a href="" id="submenu" class="nav-link">Edit Invoice</a>
+                                <a href="" id="submenu" class="nav-link">Pending Collection</a>
+                                <a href="" id="submenu" class="nav-link">Cash Closing</a>
+                                <a href="" id="submenu" class="nav-link">Report Dispatching</a>
+                                <a href="" id="submenu" class="nav-link">OP Registration</a>
+                                <a href="" id="submenu" class="nav-link">Cancel Invoice</a>
+                                <a href="" id="submenu" class="nav-link">Billwise Collection</a>
+                                <a href="" id="submenu" class="nav-link">Billwise Collection Area</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection Booking</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection View</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection Pending Coll</a>
+                                <a href="" id="submenu" class="nav-link">Scan Booking</a>
+                                <a href="" id="submenu" class="nav-link">Envelop</a>
+                                <a href="" id="submenu" class="nav-link">PatientView</a>
+                                <a href="" id="submenu" class="nav-link">Result Delivery Status</a>
+                            </div>
+                        </li>
+
+                        @*********************@
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Sample Flow <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu" style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Barcode Generation</a>
+                                <a href="" class="nav-link">Biochemistry Sample Receiving</a>
+                                <a href="" class="nav-link">Haemetology Sample Receiving</a>
+                                <a href="" class="nav-link">Microbiology Sample Receiving</a>
+                                <a href="" class="nav-link">Clinical Pathology Sample Receiving</a>
+                                <a href="" class="nav-link">Sample Tracking</a>
+                                <a href="" class="nav-link">Sample Rejection</a>
+                                <a href="" class="nav-link">Sample Receiving</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Technical <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Result Issuing</a>
+                                <a href="" class="nav-link">Referal Lab Management</a>
+                                <a href="" class="nav-link">TAT out Explanation</a>
+                                <a href="" class="nav-link">Result Register</a>
+                                <a href="" class="nav-link">Test Wise Register</a>
+                                <a href="" class="nav-link">ECHO Report</a>
+                                <a href="" class="nav-link">Work Register(Test Wise)</a>
+                                <a href="" class="nav-link">Work Register(Bill Wise)</a>
+                                <a href="" class="nav-link">Work Order</a>
+                                <a href="" class="nav-link">Attatch Document</a>
+                                <a href="" class="nav-link">Us Scan/X-Ray/Ecg/Mammography Management</a>
+                                <a href="" class="nav-link">Remove authorization</a>
+                                <a href="" class="nav-link">First Level authorization</a>
+                                <a href="" class="nav-link">Second Authorization Queue</a>
+                                <a href="" class="nav-link">Email Queue</a>
+                                <a href="" class="nav-link">Email Radiology Report</a>
+                                <a href="" class="nav-link">Pending Test</a>
+                                <a href="" class="nav-link">covid-19</a>
+                                <a href="" class="nav-link">wrktestreg</a>
+                                <a href="" class="nav-link">edit pend</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Accounts <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Account Ledger</a>
+                                <a href="" class="nav-link">Cash Payments</a>
+                                <a href="" class="nav-link">Cash Receipts</a>
+                                <a href="" class="nav-link">Day Book</a>
+                                <a href="" class="nav-link">Journal</a>
+                                <a href="" class="nav-link">Cheque Issue</a>
+                                <a href="" class="nav-link">Cheque Receipt</a>
+                                <a href="" class="nav-link">Cheque Transaction</a>
+                                <a href="" class="nav-link">TestReqQue</a>
+                                <a href="" class="nav-link">Referallabbilwise</a>
+                            </div>
+                        </li>
+                        @**********************************@
+                        <li class="nav-item dropright " style="position:relative">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Reports <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+
+                            <div class="dropdown-menu " id="SubMenu" style="will-change: transform;width:300px; position: relative; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#dailyclctnstmnts" onclick="toggle_visibility('menu1');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#dailyclctnstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Daily Periodic Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu1" style="height: 380px; overflow-y: scroll;will-change: transform;width:300px; position: absolute;display:none; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#dailycollectionstmnt" class="nav-link">Daily Collection Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyclctnSmry" class="nav-link">Daily Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyclctnSmry2" class="nav-link">Daily Collection Summary2</a>
+                                            <a href="" data-toggle="modal" data-target="#clctnBrnchWise" class="nav-link">Collection Statement Branch Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#clctnSmryBrnchWise" class="nav-link">Collection Summary Branch Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyCashInvoice" class="nav-link">Daily Cash Invoice</a>
+                                            <a href="" data-toggle="modal" data-target="#pidWiseBillClctn" class="nav-link">Patient ID Wise Bill Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#mnthlyClctnSmry" class="nav-link">Monthly Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#DivisionSummary" class="nav-link">Monthly Collection Division Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#MonthlyCollBrnchWise" class="nav-link">Monthly Collection Summary BranchWise</a>
+                                            <a href="" data-toggle="modal" data-target="#usrWiseClctn" class="nav-link">User Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#usrWiseClctnSmry" class="nav-link">User Wise Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#PatWiseInvoice" class="nav-link">Patient Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWiseInv" class="nav-link">Division Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWiseInv2" class="nav-link">Division Wise Invoices2</a>
+                                            <a href="" data-toggle="modal" data-target="#divWiseSmry" class="nav-link">Division Wise Summary</a>
+                                            @*<a href="" data-toggle="modal" data-target="#PROInvoice" class="nav-link">PRO Perfomance Invoice Wise</a>
+                                                <a href="" class="nav-link">PRO Perfomance Division Wise</a>*@
+                                            <a href="" data-toggle="modal" data-target="#usrTackRpt" class="nav-link">User Track Report</a>
+                                            <a href="" data-toggle="modal" data-target="#brnchWiseInv" class="nav-link">Branch Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#discWiseInv" class="nav-link">Discount Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#CncldInvoices" class="nav-link">Cancelled Invoices</a>
+                                            @*<a href="" class="nav-link">PRO Daily Report</a>*@
+                                            <a href="" data-toggle="modal" data-target="#doctrMeeting" class="nav-link">Doctors Meeting</a>
+                                            <a href="" data-toggle="modal" data-target="#DptWiseInv" class="nav-link">Department Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWisePerfomance" class="nav-link">Division Wise Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#refundStmnts" class="nav-link">Refund Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#DctrVisit" class="nav-link">Doctors List(Visit)</a>
+                                            <a href="" data-toggle="modal" data-target="#newPtntStmnt" class="nav-link">New Patient List</a>
+                                            <a href="" data-toggle="modal" data-target="#SrvceChrgStmnt" class="nav-link">Service Charge Statement</a>
+                                            <a href="" data-toggle="modal" data-target="#oldPtntStmnt" class="nav-link">Old Patient List</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#creditclcnstmnts" onclick="toggle_visibility('menu2');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#creditclcnstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Credit Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu2" style="height: 350px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#crWiseClctn" class="nav-link">Credit CardWise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#insrnceWiseClctn" class="nav-link">Insurance Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#corpInv" class="nav-link">Corporate Invoice</a>
+                                            <a href="" data-toggle="modal" data-target="#corpCollSmry" class="nav-link">Corporate Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpCollSmryDiv" class="nav-link">Corporate Collection Summary(Division)</a>
+                                            <a href="" data-toggle="modal" data-target="#corpOutStndng" class="nav-link">Corporate Outstanding</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDivPerfmnce" class="nav-link">Corporate Division Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#corpTstPrfmnce" class="nav-link">Corporate Test Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#BillWiseClctn" class="nav-link">Billwise Collection Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#BillWiseDue" class="nav-link">Billwise Due Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpPendColl" class="nav-link">Corporate Wise Pending Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#areaWsSmry" class="nav-link">Area Wise Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpMnthSmry" class="nav-link">Corporate Bill Monthly Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpMnDetStmnt" class="nav-link">Corporate Monthly Detailed Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDctrStmnt" class="nav-link">Corporate Doctor Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpAgntRpt" class="nav-link">Corporate Agent Reports</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDepStmnts" class="nav-link">Corporate Department Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#CorpTstAreaWise" class="nav-link">Corporate Test Perfomance Area Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#CorpBillDet" class="nav-link">Corporate Bill Detailed</a>
+                                            <a href="" data-toggle="modal" data-target="#agntCorpStmnt" class="nav-link">Agent Corporate</a>
+                                            <a href="" data-toggle="modal" data-target="#crLimitStmnt" class="nav-link">Credit Limit Statements</a>
+                                            @*<a href="" class="nav-link" style="font-weight:bold">BHIM/UPI Online Payment Report</a>
+                                                <a href="" class="nav-link" style="font-weight:bold">Corporate Invoice 2</a>*@
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#cashduestmnts" onclick="toggle_visibility('menu3');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#cashduestmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Cash Due/Pending Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu3" style="will-change: transform; display:none;position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#pndRgstr" class="nav-link">Pending Register</a>
+                                            <a href="" data-toggle="modal" data-target="#pndRgstr2" class="nav-link">Pending Register2</a>
+                                            <a href="" data-toggle="modal" data-target="#pndClctnReg" class="nav-link">Pending Collection Register</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#DRrefbystmnts" onclick="toggle_visibility('menu4');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#DRrefbystmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Doctor/Ref.by Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu4" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#docWiseClctn" class="nav-link">Doctor Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#docPrfmnce" class="nav-link">Doctors Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#docSplzdLst" class="nav-link">Doctors Specialized List</a>
+                                            <a href="" data-toggle="modal" data-target="#hospWiseDocStmnt" class="nav-link">Hospital Wise Doctors List</a>
+                                            <a href="" data-toggle="modal" data-target="#docEnvelop" class="nav-link">Doctors Envelop</a>
+                                            <a href="" data-toggle="modal" data-target="#outDrWiseClctn" class="nav-link">Out Doctors Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#areaWiseDrList" style="display:none" class="nav-link">AreaWiseDrList</a>
+                                            <a href="" class="nav-link" style="display:none">drtestperfomance2</a>
+                                            <a href="" data-toggle="modal" data-target="#NoDrPatLst" class="nav-link">NO Dr Patient Test</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#technicalstmnts" onclick="toggle_visibility('menu5');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#technicalstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Technical statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu5" style="height: 280px; will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#refLabRpt" style="display:none" class="nav-link">Referal Lab</a>
+                                            <a href="" data-toggle="modal" data-target="#removeAuthStmnts" class="nav-link">Remove Authorization Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#rptDispStmnts" class="nav-link">Report Dispatching Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#SmplClctnInv" class="nav-link">Sample Collection/Agent Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#rptDisp2" class="nav-link">Report Dispatching 2</a>
+                                            <a href="" data-toggle="modal" data-target="#timeOvrStmnt" class="nav-link">Time Over Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#authDls" class="nav-link">Authorization Details</a>
+                                            <a href="" data-toggle="modal" data-target="#cust2RsltReg" class="nav-link">Customize2 Result Register</a>
+                                            <a href="" data-toggle="modal" data-target="#nonBarcodedTsts" class="nav-link">Non Barcoded Tests</a>
+                                            <a href="" data-toggle="modal" data-target="#IPOPrpt" class="nav-link">IP/OP Wise Report</a>
+                                            <a href="" class="nav-link">Testwise Result Register</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#teststatements" onclick="toggle_visibility('menu6');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#teststatements" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Test Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu6" style="height: 250px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#tstWiseInvce" class="nav-link">Test Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#tstPrfmnce" class="nav-link">Test Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#tstPrDivWise" class="nav-link">Test Perfomance(Division Wise)</a>
+                                            <a href="" data-toggle="modal" data-target="#MulTstInvoice" class="nav-link">Multiple Teat Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#PatTstWise" class="nav-link">Test Wise Patients</a>
+                                            <a href="" class="nav-link">Outside Test Statements</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Doctor Wise Test Perfomance</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">op patient graph report</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">pro dr income report</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">collectioboyincome</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Proincme</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">clientlabindvl</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Ptient Details</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                @*<a href="" class="nav-link">Master Values</a>*@
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#mastervalues" onclick="toggle_visibility('menu7');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#mastervalues" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Master Values <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu7" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" class="nav-link">Test Price List</a>
+                                            <a href="" class="nav-link">Test Detailed</a>
+                                            <a href="" class="nav-link">Doctors List</a>
+                                            <a href="" class="nav-link">Test Detailed(Perform Wise)</a>
+                                            <a href="" class="nav-link">Corporate List</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Doctors List Categorywise</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">dr payment</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">authorization payment</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Pending Statemnts</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Covid Result Statement</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                @*<a href="" class="nav-link">Accounts</a>*@
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#" onclick="toggle_visibility('menu8');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#accounts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                            <p id="sub">Accounts <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu8" style="transform: translate3d(285px, 0px, 0px); display:none;top: 0px; left: 0px;">
+                                            <a href="" class="nav-link">Cash Payments</a>
+                                            <a href="" class="nav-link">Cash Payments Summary</a>
+                                            <a href="" class="nav-link">Cash Receipts</a>
+                                            <a href="" class="nav-link">Cash Receipts Summary</a>
+                                            <a href="" class="nav-link">Ledger</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                        @**********************************@
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Marketing <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">PRO Hospital Wise</a>
+                                <a href="" class="nav-link">PRO Specialized Wise</a>
+                                <a href="" class="nav-link">Doctors List(No Buissiness)</a>
+                                <a href="" class="nav-link">Doctor Wise Monthly Summary</a>
+                                <a href="" class="nav-link">Monthly Incentive Statements</a>
+                                <a href="" class="nav-link">Set Dr Incentive</a>
+                                <a href="" class="nav-link">Monthly Incentice</a>
+                                <a href="" class="nav-link">Monthly Incentice(DateWise)</a>
+                                <a href="" class="nav-link">Incentive(Division)</a>
+                                <a href="" class="nav-link">Set Dr IncenticeTest</a>
+                                <a href="" class="nav-link">Receiving sample</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Administrator <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+
+                                @*******************************************@
+                                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    @*<i class="nav-icon fas fa-th"></i>*@
+                                    <p>User Settings <i class="right fas fa-chevron-right"></i></p>
+                                </a>
+                                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(170px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                    <a href="" class="nav-link">Create New User</a>
+                                    <a href="" class="nav-link">Change Password</a>
+                                    <a href="" class="nav-link">User Privilege</a>
+                                    <a href="" class="nav-link">Users List</a>
+                                </div>
+
+
+                                @*******************************************@
+                                <a href="" class="nav-link">User Logins</a>
+                                <a href="" class="nav-link">Edited Invoice</a>
+                                <a href="" class="nav-link">Edit Discount</a>
+                                <a href="" class="nav-link">Email Configuration</a>
+                                <a href="" class="nav-link">Create New Finanacial Year</a>
+                                <a href="" class="nav-link">Settings</a>
+                                <a href="" class="nav-link">Remove Barcode Data</a>
+                                <a href="" class="nav-link">Agent Wise Incentive</a>
+                                <a href="" class="nav-link">Convert Invoice</a>
+                                <a href="" class="nav-link">Merge Accounts</a>
+                                <a href="" class="nav-link">Result Letter Head</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Master Settings <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="height: 580px; overflow-y: scroll;will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Test</a>
+                                <a href="" class="nav-link">Doctor</a>
+                                <a href="" class="nav-link">Doctor Schedule</a>
+                                <a href="" class="nav-link">Doctor's Leave</a>
+                                <a href="" class="nav-link">Hospital</a>
+                                <a href="" class="nav-link">Agent</a>
+                                <a href="" class="nav-link">Patient</a>
+                                <a href="" class="nav-link">Employee</a>
+                                <a href="" class="nav-link">Antibiotic</a>
+                                <a href="" class="nav-link">Look Up Entry</a>
+                                <a href="" class="nav-link">Appoinment Session</a>
+                                <a href="" class="nav-link">Set customize1</a>
+                                <a href="" class="nav-link">Set customize2</a>
+                                <a href="" class="nav-link">Set customize3</a>
+                                <a href="" class="nav-link">Set customize4</a>
+                                <a href="" class="nav-link">Set Culture</a>
+                                <a href="" class="nav-link">Set Test Order</a>
+                                <a href="" class="nav-link">Set Antibiotic Order</a>
+                                <a href="" class="nav-link">Set Special Rate</a>
+                                <a href="" class="nav-link">Set Result Template</a>
+                                <a href="" class="nav-link">Contacts</a>
+                                <a href="" class="nav-link">Set Doctor Payments</a>
+                                <a href="" class="nav-link">Assign Study To Doctor</a>
+                                <a href="" class="nav-link">Analyzer</a>
+                                <a href="" class="nav-link">Set Corporate</a>
+                                <a href="" class="nav-link">Set Analyzer Normal Range</a>
+                                <a href="" class="nav-link">Set Doctor</a>
+                                <a href="" class="nav-link">PRO Daily Report</a>
+                                <a href="" class="nav-link">Set Doctor Signature</a>
+                                <a href="" class="nav-link">Members</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <i class="nav-icon fas fa-question-circle"></i>
+                                <p>Help <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">About Us</a>
+                                <a href="" class="nav-link" style="display:none">Settings</a>
+                                <a href="" class="nav-link" style="display:none">Barcode</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/InvoiceRegister/IvoiceRegistration" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>Inv. Registration</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/MasterTestDetails/MasterTestDetail" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>Test</p>
+                            </a>
+                        </li>
+                        @*<li class="nav-item ">
+                            <a href="" data-toggle="modal" data-target="#doctorModal" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>Doctor</p>
+                            </a>
+                        </li>*@
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                @*<i class="nav-icon fas fa-qrcode"></i>*@
+                                <i class="nav-icon fas fa-barcode"></i>
+                                <p>Barcode/Labeling</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-microscope"></i>
+                                <p>Pending Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-poll"></i>
+                                <p>Result Releasing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-money-bill-alt"></i>
+                                <p>Payments</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>Cash Closing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-calculator"></i>
+                                <p>Calculator</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-check"></i>
+                                <p>Appointment</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-comment-dots"></i>
+                                <p>Chat/Alerts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-house-user"></i>
+                                <p>Home Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-envelope-open"></i>
+                                <p>Email List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-bell"></i>
+                                <p>Alarm</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>News & Events</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-user-circle"></i>
+                                <p>About Us</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>Exit</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+
+            </div>
+
+        </aside>
+        @*<div style="margin-left:300px">
+                <input name="" id="testdate" type="datetime" style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control"  readonly="">
+                <input type="image" id="datepicker" src="~/Content/logintemplate/img/calender.png" />
+            ///////////////////////////////////////////////////////////////////////////////////////
+            </div>*@
+        @*/////////////////////////////////////////////////////////////////////////*@
+
+        @*///////////////////////////////////////////////daily periodic collection ststements//////////////////////////////////////////////////////*@
+        @**********************************************************************************************************************@
+
+        <footer class="main-footer footer-btns">
+            <p><a href="https://iconinfoware.com/" target="_blank">Developed By Icon Infoware Technologies</a></p>
+            @*<p><a href="https://iconinfoware.com/" target="_blank">Designed and Developed By Icon Infoware Technologies</a></p>*@
+            <img src="@Url.Content("~/Content/logintemplate/img/lisfy.svg" )" class="lisfy-logo" alt="logo">
+        </footer>
+        <script src="@Url.Content("~/Content/logintemplate/dist/js/adminlte.min.js")"></script>
+
+    </div>
+
+}
+@section Scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Content/logintemplate/dist/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"></script>
+
+    <script>
+
+        /////////////////////////////////////////////
+
+        $("#btnOldPtntView").on("click.btnOldPtntView", function () {
+            //patientCheck
+            if ($("#WithOutDctrCheck").is(':checked') === true) {
+                event.preventDefault();
+                $('#OldPatientStmnt tbody tr:not(:last)').remove();
+                var rowCount = $("#OldPatientStmnt tbody tr").length;
+                var frmDate = $("#oldPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#oldPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var oldpatListObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 0,
+                    ff: fdate,
+                    tt: tdate
+                };
+
+                $.ajax({
+                    url: "/LISFY/OldPatientList",
+                    type: "POST",
+                    data: JSON.stringify(oldpatListObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+
+                            //window.location = "/LISFY/HomePage";
+                            var currentrow = $("#OldPatientStmnt").find('tbody tr');
+                            //var currentrow = $("#tstAddTable").find('tbody tr');
+                            $.each(data.Record, function (index, newPat) {
+                                if (index > 0) {
+                                    currentrow = $(currentrow).clone();
+                                    $("#OldPatientStmnt tbody").append($(currentrow));
+                                    currentrow = $("#OldPatientStmnt tbody tr:last");
+                                }
+                                var Invdate = newPat.Inv_Date;
+                                //OldSlno Oldlabno OldPatname OldPatphone OldinvDate
+                                $(currentrow).find("#OldSlno").text((index + 1));
+                                $(currentrow).find("#Oldlabno").text(newPat.Inv_No);
+                                $(currentrow).find("#OldPatname").text(newPat.Inv_name);
+                                $(currentrow).find("#OldPatphone").text(newPat.Inv_phno);
+                                $(currentrow).find("#OldinvDate").text(Invdate);
+
+                            })
+
+                        }
+                        else {
+
+                        }
+                    }
+
+                })
+            }
+            else if ($("#WithDctrCheck").is(':checked') === true) {
+                //alert("hai");
+                event.preventDefault();
+                $('#OldPatientStmnt tbody tr:not(:last)').remove();
+                var rowCount = $("#OldPatientStmnt tbody tr").length;
+                var frmDate = $("#oldPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#oldPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var oldpatListObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 1,
+                    ff: fdate,
+                    tt: tdate
+                };
+                $.ajax({
+                    url: "/LISFY/OldPatientList",
+                    type: "POST",
+                    data: JSON.stringify(oldpatListObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+                            //$("#ClctnSummary2 tbody tr").remove();
+                            ////window.location = "/LISFY/HomePage";
+                            var currentrow = $("#OldPatientStmnt").find('tbody tr');
+                            //var currentrow = $("#tstAddTable").find('tbody tr');
+                            $.each(data.Record, function (index, newPat) {
+                                if (index > 0) {
+                                    currentrow = $(currentrow).clone();
+                                    $("#OldPatientStmnt tbody").append($(currentrow));
+                                    currentrow = $("#OldPatientStmnt tbody tr:last");
+                                }
+
+                                var Invdate = newPat.Inv_Date;
+                                //OldSlno Oldlabno OldPatname OldPatphone OldinvDate
+                                $(currentrow).find("#OldSlno").text((index + 1));
+                                $(currentrow).find("#Oldlabno").text(newPat.Inv_No);
+                                $(currentrow).find("#OldPatname").text(newPat.Inv_name);
+                                $(currentrow).find("#OldPatphone").text(newPat.Inv_phno);
+                                $(currentrow).find("#OldinvDate").text(Invdate);
+
+
+
+                            })
+
+                        }
+                        else {
+
+
+                        }
+
+
+                    }
+
+                })
+            }
+            else {
+
+            }
+        })
+        $("#srvcChrgRpt").on("click.srvcChrgRpt", function () {
+            //patientCheck
+            //if ($("#WithOutDctrChck").is(':checked') === true) {
+            event.preventDefault();
+            //$('#SrvChrgStmnt tbody tr:not(:last)').remove();
+            var rowCount = $("#SrvChrgStmnt tbody tr").length;
+            var frmDate = $("#srvChrgFrm").val();
+            var x = frmDate.split("/");
+            var dd = x[0];
+            var mm = x[1];
+            var yy = x[2];
+            var fdate = mm + "/" + dd + "/" + yy;
+            var toDate = $("#srvChrgTo").val();
+            var x1 = toDate.split("/");
+            var dd1 = x1[0];
+            var mm1 = x1[1];
+            var yy1 = x1[2];
+            var tdate = mm1 + "/" + dd1 + "/" + yy1;
+            var srvcChprntObj = {
+                rowCount: rowCount,
+                dctrCheck: 0,
+                ff: fdate,
+                tt: tdate,
+                User_Name: $("#collname").val(),
+                User_Key: $("#collKey").val()
+            };
+
+            $.ajax({
+                url: "/LISFY/SrChrgRptPrint",
+                type: "POST",
+                data: JSON.stringify(srvcChprntObj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    event.preventDefault();
+                    if (data.Result === "OK") {
+
+                        window.location = "/LISFY/PDFSrChrgRptPrint";
+
+                    }
+                    else {
+
+                    }
+                }
+
+            })
+
+        })
+        $("#srvcChrgRptView").on("click.srvcChrgRptView", function () {
+            //patientCheck
+            //if ($("#WithOutDctrChck").is(':checked') === true) {collKey collPhno collname
+            event.preventDefault();
+            $('#SrvChrgStmnt tbody tr:not(:last)').remove();
+            var lastrow = $("#SrvChrgStmnt tbody tr:last");
+            $(lastrow).find("#srSlNo").text((""));
+            $(lastrow).find("#SrDate").text((""));
+            $(lastrow).find("#SrLabNo").text("");
+            $(lastrow).find("#SrName").text("");
+            $(lastrow).find("#SrPayMode").text("");
+            $(lastrow).find("#SrCharge").text("");
+            $(lastrow).find("#SrCollPerson").text("");
+
+            var rowCount = $("#SrvChrgStmnt tbody tr").length;
+            var frmDate = $("#srvChrgFrm").val();
+            var x = frmDate.split("/");
+            var dd = x[0];
+            var mm = x[1];
+            var yy = x[2];
+            var fdate = mm + "/" + dd + "/" + yy;
+            var toDate = $("#srvChrgTo").val();
+            var x1 = toDate.split("/");
+            var dd1 = x1[0];
+            var mm1 = x1[1];
+            var yy1 = x1[2];
+            var tdate = mm1 + "/" + dd1 + "/" + yy1;
+            var srvcChObj = {
+                rowCount: rowCount,
+                dctrCheck: 0,
+                ff: fdate,
+                tt: tdate,
+                User_Name: $("#collname").val(),
+                User_Key: $("#collKey").val()
+            };
+
+            $.ajax({
+                url: "/LISFY/SrChrgRptView",
+                type: "POST",
+                data: JSON.stringify(srvcChObj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    event.preventDefault();
+                    if (data.Result === "OK") {
+                        //srSlNo SrDate SrLabNo SrName SrPayMode SrCharge SrCollPerson
+                        //window.location = "/LISFY/HomePage";
+                        var currentrow = $("#SrvChrgStmnt").find('tbody tr');
+                        //var currentrow = $("#tstAddTable").find('tbody tr');
+                        $.each(data.Record, function (index, srvcChrg) {
+                            if (index > 0) {
+                                currentrow = $(currentrow).clone();
+                                $("#SrvChrgStmnt tbody").append($(currentrow));
+                                currentrow = $("#SrvChrgStmnt tbody tr:last");
+                            }
+                            var Invdate = srvcChrg.Inv_Date;
+
+                            $(currentrow).find("#srSlNo").text((index + 1));
+                            $(currentrow).find("#SrDate").text(Invdate);
+                            $(currentrow).find("#SrLabNo").text(srvcChrg.Inv_No);
+                            $(currentrow).find("#SrName").text(srvcChrg.Inv_name);
+                            $(currentrow).find("#SrPayMode").text(srvcChrg.Inv_PayMode);
+                            $(currentrow).find("#SrCharge").text(srvcChrg.Inv_Schrge);
+                            $(currentrow).find("#SrCollPerson").text(srvcChrg.AhMst_pName);
+
+                        })
+                        $('#collKey').val("");
+                        $('#collPhno').val("");
+                        $('#collname').val("");
+
+                    }
+                    else {
+
+                    }
+                }
+
+            })
+
+        })
+        $("#newSrvcChrgRpt").on("click.newSrvcChrgRpt", function () {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = dd + '/' + mm + '/' + yyyy;
+            //$('#usrName').val("");collnameCheck
+            //$('#collnameCheck').checked;
+            //$('#collnameCheck').checked = true;
+            $("input[name='collCheck']").each(function () {
+                if ($(this).val() !== "Name") {
+                    $(this).prop("checked", false);
+                    //$('#collnameCheck').prop("checked", true);
+                }
+            });
+            $('#collname').val("");
+            //$('#usrWsSmryTo').val("");collKey collPhno collname
+            $('#SrvChrgStmnt tbody tr:not(:last)').remove();
+            var currentrow = $("#SrvChrgStmnt tbody tr:last");
+            $(currentrow).find("#srSlNo").text((""));
+            $(currentrow).find("#SrDate").text("");
+            $(currentrow).find("#SrLabNo").text("");
+            $(currentrow).find("#SrName").text("");
+            $(currentrow).find("#SrPayMode").text("");
+            $(currentrow).find("#SrCharge").text("");
+            $(currentrow).find("#SrCollPerson").text("");
+            $('#srvChrgFrm').val(today);
+            $('#srvChrgTo').val(today);
+            $('#collKey').val("");
+            $('#collPhno').val("");
+            $('#collname').val("");
+            //$("#usrName").focus();
+        })
+        $(document).ready(function () {
+            //$("#usrCheck").click(function () {
+            if ($("#collnameCheck").is(':checked') === true) {
+
+                $('#collname').autocomplete({
+                    source: function (request, response) {
+
+                        $.ajax({
+                            type: 'GET',
+                            url: "/LISFY/SearchSrvcUsrName",
+                            data: { term: $("#collname").val() },
+                            contentType: "application/json; charset=utf-8",
+                            dataType: 'json',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.Result === "OK") {
+
+
+                                    response($.map(data.Records, function (Record) {
+                                        return {
+                                            label: Record.AhMst_pName,
+                                            val: Record.AhMst_mobile,
+                                            id: Record.AhMst_Key
+
+                                        }
+
+                                    }))
+
+
+                                }
+
+
+                            }
+                        });
+
+                    },
+
+                    minLength: 1,
+                    select: function (event, ui) {
+
+                        $("#collPhno").val(ui.item.val);
+                        $("#collKey").val(ui.item.id);
+                        $("#collname").val(ui.item.label);
+                    }
+
+                })
+            }
+
+        })
+        $("#collnameCheck").click(function () {
+            if ($("#collnameCheck").is(':checked') === true) {
+
+                $('#collname').autocomplete({
+                    source: function (request, response) {
+
+                        $.ajax({
+                            type: 'GET',
+                            url: "/LISFY/SearchSrvcUsrName",
+                            data: { term: $("#collname").val() },
+                            contentType: "application/json; charset=utf-8",
+                            dataType: 'json',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.Result === "OK") {
+
+
+                                    response($.map(data.Records, function (Record) {
+                                        return {
+                                            label: Record.AhMst_pName,
+                                            val: Record.AhMst_mobile,
+                                            id: Record.AhMst_Key
+
+                                        }
+
+                                    }))
+
+
+                                }
+
+
+                            }
+                        });
+
+                    },
+
+                    minLength: 1,
+                    select: function (event, ui) {
+                        $("#collPhno").val(ui.item.val);
+                        $("#collKey").val(ui.item.id);
+                        $("#collname").val(ui.item.label);
+                    }
+
+                })
+            }
+        })
+        $("#collPhnoCheck").click(function () {
+            if ($("#collPhnoCheck").is(':checked') === true) {
+
+                $('#collname').autocomplete({
+                    source: function (request, response) {
+
+                        $.ajax({
+                            type: 'GET',
+                            url: "/LISFY/SearchSrvcUsrPhno",
+                            data: { term: $("#collname").val() },
+                            contentType: "application/json; charset=utf-8",
+                            dataType: 'json',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.Result === "OK") {
+
+
+                                    response($.map(data.Records, function (Record) {
+                                        return {
+                                            label: Record.AhMst_pName,
+                                            val: Record.AhMst_mobile,
+                                            id: Record.AhMst_Key
+
+                                        }
+
+                                    }))
+
+
+                                }
+
+
+                            }
+                        });
+
+                    },
+
+                    minLength: 1,
+                    select: function (event, ui) {
+                        $("#collPhno").val(ui.item.val);
+                        $("#collKey").val(ui.item.id);
+                        $("#collname").val(ui.item.label);
+                    }
+
+                })
+            }
+        })
+        $("#collcodeCheck").click(function () {
+            if ($("#collcodeCheck").is(':checked') === true) {
+
+                $('#collname').autocomplete({
+                    source: function (request, response) {
+
+                        $.ajax({
+                            type: 'GET',
+                            url: "/LISFY/SearchSrvcUsrCode",
+                            data: { term: $("#collname").val() },
+                            contentType: "application/json; charset=utf-8",
+                            dataType: 'json',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.Result === "OK") {
+
+
+                                    response($.map(data.Records, function (Record) {
+                                        return {
+                                            label: Record.AhMst_pName,
+                                            val: Record.AhMst_mobile,
+                                            id: Record.AhMst_Key
+
+                                        }
+
+                                    }))
+
+
+                                }
+
+
+                            }
+                        });
+
+                    },
+
+                    minLength: 1,
+                    select: function (event, ui) {
+                        $("#collPhno").val(ui.item.val);
+                        $("#collKey").val(ui.item.id);
+                        $("#collname").val(ui.item.label);
+                    }
+
+                })
+            }
+        })
+        $("#srvcChrgClose").on("click.srvcChrgClose", function () {
+            window.location = "HomePage";
+        })
+        ///////////////////////////////////////////////////////
+        $(document).ready(function () {
+            $('#srvChrgFrmClndr').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '-90:+80',
+                autoclose: true,
+                showOn: 'both',
+                timeFormat: 'hh:mm:ss',
+                buttonImage: "/Content/logintemplate/img/calender.png",
+                buttonImageOnly: true,
+                onSelect: function () {
+                    dateFormat: 'dd/mm/yy'
+
+                    $(this).change();
+
+                }
+            });
+            $('#srvChrgToClndr').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '-90:+80',
+                autoclose: true,
+                showOn: 'both',
+                timeFormat: 'hh:mm:ss',
+                buttonImage: "/Content/logintemplate/img/calender.png",
+                buttonImageOnly: true,
+                onSelect: function () {
+                    dateFormat: 'dd/mm/yy'
+
+                    $(this).change();
+
+                }
+            });
+            $("#srvChrgFrmClndr").change(function () {
+                var val = $("#srvChrgFrmClndr").val();
+                $("#srvChrgFrm").val(val);
+            });
+            $('#srvChrgFrmClndr').datepicker({
+                dateFormat: 'dd/mm/yy'
+
+            });
+            $('#srvChrgToClndr').datepicker({
+                dateFormat: 'dd/mm/yy'
+
+            });
+            $("#srvChrgToClndr").change(function () {
+                var val = $("#srvChrgToClndr").val();
+                $("#srvChrgTo").val(val);
+            });
+
+        })
+        $("#btnNewPtntList").on("click.btnNewPtntList", function () {
+            //patientCheck
+            if ($("#WithOutDctrChck").is(':checked') === true) {
+                event.preventDefault();
+                //$('#NewPatientStmnt tbody tr:not(:last)').remove();
+
+                var rowCount = $("#NewPatientStmnt tbody tr").length;
+                var frmDate = $("#newPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#newPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var patListPrintObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 0,
+                    ff: fdate,
+                    tt: tdate
+                };
+
+                $.ajax({
+                    url: "/LISFY/NewPatientListPrint",
+                    type: "POST",
+                    data: JSON.stringify(patListPrintObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+                            var currentrow = $("#NewPatientStmnt tbody tr:last");
+                            $(currentrow).find("#serlNmbr").text((""));
+                            $(currentrow).find("#labno").text("");
+                            $(currentrow).find("#name").text("");
+                            $(currentrow).find("#phone").text("");
+                            $(currentrow).find("#invDate").text("");
+                            window.location = "/LISFY/PDFNewPatientListPrint";
+                        }
+                        else {
+
+                        }
+                    }
+
+                })
+            }
+            else if ($("#WithDctrChck").is(':checked') === true) {
+                //alert("hai");
+                event.preventDefault();
+                $('#NewPatientStmnt tbody tr:not(:last)').remove();
+                var rowCount = $("#NewPatientStmnt tbody tr").length;
+                var frmDate = $("#newPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#newPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var patListPrintObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 1,
+                    ff: fdate,
+                    tt: tdate
+                };
+                $.ajax({
+                    url: "/LISFY/NewPatientListPrint",
+                    type: "POST",
+                    data: JSON.stringify(patListPrintObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+                            window.location = "/LISFY/PDFNewPatientListPrint";
+                        }
+                        else {
+
+
+                        }
+                        btnNewPtntView
+
+                    }
+
+                })
+            }
+            else {
+
+            }
+        })
+        $("#btnNewPtntView").on("click.btnNewPtntView", function () {
+            //patientCheck
+            if ($("#WithOutDctrChck").is(':checked') === true) {
+                event.preventDefault();
+                $('#NewPatientStmnt tbody tr:not(:last)').remove();
+                var rowCount = $("#NewPatientStmnt tbody tr").length;
+                var frmDate = $("#newPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#newPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var patListObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 0,
+                    ff: fdate,
+                    tt: tdate
+                };
+                $.ajax({
+                    url: "/LISFY/NewPatientList",
+                    type: "POST",
+                    data: JSON.stringify(patListObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+
+                            //window.location = "/LISFY/HomePage";
+                            var currentrow = $("#NewPatientStmnt").find('tbody tr');
+                            //var currentrow = $("#tstAddTable").find('tbody tr');
+                            $.each(data.Record, function (index, newPat) {
+                                if (index > 0) {
+                                    currentrow = $(currentrow).clone();
+                                    $("#NewPatientStmnt tbody").append($(currentrow));
+                                    currentrow = $("#NewPatientStmnt tbody tr:last");
+                                }
+                                var Invdate = newPat.Inv_Date;
+
+                                $(currentrow).find("#serlNmbr").text((index + 1));
+                                $(currentrow).find("#labno").text(newPat.Inv_No);
+                                $(currentrow).find("#name").text(newPat.Inv_name);
+                                $(currentrow).find("#phone").text(newPat.Inv_phno);
+                                $(currentrow).find("#invDate").text(Invdate);
+
+                            })
+
+                        }
+                        else {
+
+                        }
+                    }
+
+                })
+            }
+            else if ($("#WithDctrChck").is(':checked') === true) {
+                //alert("hai");
+                event.preventDefault();
+                $('#NewPatientStmnt tbody tr:not(:last)').remove();
+                var rowCount = $("#NewPatientStmnt tbody tr").length;
+                var frmDate = $("#newPtntFrm").val();
+                var x = frmDate.split("/");
+                var dd = x[0];
+                var mm = x[1];
+                var yy = x[2];
+                var fdate = mm + "/" + dd + "/" + yy;
+                var toDate = $("#newPtntTo").val();
+                var x1 = toDate.split("/");
+                var dd1 = x1[0];
+                var mm1 = x1[1];
+                var yy1 = x1[2];
+                var tdate = mm1 + "/" + dd1 + "/" + yy1;
+                var patListObj = {
+                    rowCount: rowCount,
+                    dctrCheck: 1,
+                    ff: fdate,
+                    tt: tdate
+                };
+                $.ajax({
+                    url: "/LISFY/NewPatientList",
+                    type: "POST",
+                    data: JSON.stringify(patListObj),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        event.preventDefault();
+                        if (data.Result === "OK") {
+                            //$("#ClctnSummary2 tbody tr").remove();
+                            ////window.location = "/LISFY/HomePage";
+                            var currentrow = $("#NewPatientStmnt").find('tbody tr');
+                            //var currentrow = $("#tstAddTable").find('tbody tr');
+                            $.each(data.Record, function (index, newPat) {
+                                if (index > 0) {
+                                    currentrow = $(currentrow).clone();
+                                    $("#NewPatientStmnt tbody").append($(currentrow));
+                                    currentrow = $("#NewPatientStmnt tbody tr:last");
+                                }
+
+                                var Invdate = newPat.Inv_Date;
+
+                                $(currentrow).find("#serlNmbr").text((index + 1));
+                                $(currentrow).find("#labno").text(newPat.Inv_No);
+                                $(currentrow).find("#name").text(newPat.Inv_name);
+                                $(currentrow).find("#phone").text(newPat.Inv_phno);
+                                $(currentrow).find("#invDate").text(Invdate);
+
+
+
+                            })
+
+                        }
+                        else {
+
+
+                        }
+
+
+                    }
+
+                })
+            }
+            else {
+
+            }
+        })
+        $(document).ready(function () {
+            $('#newPtntFrmClndr').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '-90:+80',
+                autoclose: true,
+                showOn: 'both',
+                timeFormat: 'hh:mm:ss',
+                buttonImage: "/Content/logintemplate/img/calender.png",
+                buttonImageOnly: true,
+                onSelect: function () {
+                    dateFormat: 'dd/mm/yy'
+
+                    $(this).change();
+
+                }
+            });
+            $('#newPtntToClndr').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '-90:+80',
+                autoclose: true,
+                showOn: 'both',
+                timeFormat: 'hh:mm:ss',
+                buttonImage: "/Content/logintemplate/img/calender.png",
+                buttonImageOnly: true,
+                onSelect: function () {
+                    dateFormat: 'dd/mm/yy'
+
+                    $(this).change();
+
+                }
+            });
+            $("#newPtntFrmClndr").change(function () {
+                var val = $("#newPtntFrmClndr").val();
+                $("#newPtntFrm").val(val);
+            });
+            $('#newPtntFrmClndr').datepicker({
+                dateFormat: 'dd/mm/yy'
+
+            });
+            $('#newPtntToClndr').datepicker({
+                dateFormat: 'dd/mm/yy'
+
+            });
+            $("#newPtntToClndr").change(function () {
+                var val = $("#newPtntToClndr").val();
+                $("#newPtntTo").val(val);
+            });
+
+        })
+        $("#newPtntStmntClose").on("click.newPtntStmntClose", function () {
+            window.location = "HomePage";
+        })
+        ///////////////////////////////////////////////////////
+
+    </script>
+
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>lisfyplatinum</title>
+    @RenderSection("head", required: false)
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="~/faviconGRN.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link href="~/Content/logintemplate/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/logintemplate/css/bootstrap.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/logintemplate/css/style.css")">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="~/Scripts/adminlte.min.js"></script>
+
+    @*<script src="@Url.Content("~/Content/logintemplate/js/bootstrap.min.js")"></script>*@
+</head>
+<body class="login-light">
+
+    <div class="container-fluid banner-wrapper">
+        <div class="row justify-content-center">
+            @*<div class="col-lg-8">
+                    <img src="@Url.Content("~/Content/logintemplate/img/lisfy-blue-logo.png")" alt="logo" class="lisfylogo">
+                    <span><img src="@Url.Content("~/Content/logintemplate/img/light-image.png")" alt="lisfy"></span>
+                </div>*@
+            <center>
+                <div class="col-lg-4 col-md-8" style="margin-left:300px">
+                    <div class="lisfy-login">
+                        <div class="lisfy-login-container">
+                            <br />
+
+                            <font><img src="~/Content/logintemplate/img/@(ViewBag.LoginImage)"></font>
+                            @RenderBody()
+
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+    <div class="fixed-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6"><span></span></div>
+                <div class="col-lg-6">
+                    <p>© 2021 iconinfoware.com. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/logintemplate/dist/js/adminlte.min.js"></script>
+</body>
+</html>

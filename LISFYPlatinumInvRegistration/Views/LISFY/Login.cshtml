@@ -1,0 +1,166 @@
+﻿
+@*@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_InvRegistrationLayout.cshtml";
+}
+
+<h2>Login</h2>*@
+@model LISFYPlatinumInvRegistration.Models.logindetails
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_platinumlogin.cshtml";
+}
+
+<h2></h2>
+
+
+
+
+@using (Html.BeginForm("Login", "LISFY", FormMethod.Post, new { id = "form1", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" });
+
+
+    <span>
+        @Html.DropDownListFor(model => model.Yr_Id, new SelectList(ViewBag.list, "Yr_Id", "Yr_FYear"), @*new { style = "width: 250px;" }) ,*@ new { @class = "form-control", placeholder = "FinancialYear", style = "width: 300px;height:35px" })
+
+        @Html.ValidationMessageFor(model => model.Yr_Id, "", new { @class = "text-danger" })
+    </span>
+    <span>
+        <i class="fas fa-user"></i>
+        <input name="username" type="text" id="username" placeholder="UserName" autocomplete="off" class="form-control" required />
+    </span>
+
+
+    <br />
+    <span>
+        <i class="fas fa-lock"></i>
+        <input name="password" type="password" id="password" placeholder="Password" autocomplete="off" class="form-control" required />
+    </span>
+    <span>
+        @Html.DropDownListFor(model => model.BrMst_Key, new SelectList(ViewBag.Brnchdls, "BrMst_Key", "BrMst_Name"),@*new { style = "width: 250px;" }) ,*@ new { @class = "form-control", placeholder = "FinancialYear", style = "width: 300px;height:35px" })
+        @Html.ValidationMessageFor(model => model.BrMst_Key, "", new { @class = "text-danger" })
+    </span>
+    <br />
+    @*<span>
+            <input name="corpid" type="text" placeholder="CorporateID" id="corpid" class="form-control" required hidden />
+        </span>*@
+    <br />
+    @*<label><input type="checkbox" id="logcheck"> Remember me</label>*@
+    <button type="submit" class="login-btn" id="btnLogin" style="color:white;font-family:Arial">Login</button>
+}
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script>
+
+        document.onkeydown = function (evt) {
+            var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+            if (keyCode == 13) {
+                evt.preventDefault();
+            }
+        }
+        //enter key press to login
+        document.onkeydown = function () {
+        
+            if (window.event.keyCode == '13') {
+                event.preventDefault();
+                var login = {
+                    BrMst_Key: $('#BrMst_Key').val(),
+                    BrMst_Name: $('#BrMst_Key option:selected').text(),
+                    Yr_Id: $('#Yr_Id').val(),
+                    Usr_Name: $('#username').val(),
+                    Usr_pwd: $('#password').val(),
+                    Yr_FYear: $('#Yr_Id option:selected').text()
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/LISFY/Login",
+                    data: JSON.stringify(login),
+                    contentType: "application/json;charset=utf-8",
+                    datatype: 'json',
+                    success: function (data) {
+                        if (data.Result === "OK") {
+                            window.location = "/LISFY/HomePage";
+                        }
+                        else {
+                            alert("Please check login details");
+                            window.location = "/LISFY/Login";
+                        }
+                    },
+                    error: function (abc) {
+                        $("#form1").val("");
+                        alert("Please check login details");
+                        window.location = "/LISFY/Login";
+                    }
+
+                })
+            }
+        }
+
+        //button press to login
+        //$(document).ready(function () {
+        //$(window).on("load", function () {
+        $(document).ready(function () {
+            $("#btnLogin").on("click.btnLogin", function () {
+                event.preventDefault();
+                var login = {
+                    BrMst_Key: $('#BrMst_Key').val(),
+                    BrMst_Name: $('#BrMst_Key option:selected').text(),
+                    Yr_Id: $('#Yr_Id').val(),
+                    Usr_Name: $('#username').val(),
+                    Usr_pwd: $('#password').val(),
+                    Yr_FYear: $('#Yr_Id option:selected').text()
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/LISFY/Login",
+                    data: JSON.stringify(login),
+                    contentType: "application/json;charset=utf-8",
+                    datatype: 'json',
+                    success: function (data) {
+                        if (data.Result === "OK") {
+
+
+                            window.location = "/LISFY/HomePage";
+                            //mywindow = window.open("/Dashboard/Home");
+
+
+                        }
+                        else {
+                            alert("Please check login details");
+                            window.location = "/LISFY/Login";
+                        }
+                    },
+                    error: function (abc) {
+                        $("#form1").val("");
+                        alert("Please check login details");
+                        window.location = "/LISFY/Login";
+                    }
+
+                })
+            })
+        })
+        //$("#btnLogin").on("click.btnLogin", function () {
+
+        //})
+        //})
+
+
+
+
+
+    </script>
+
+
+
+}
+
+
+
+
+
+

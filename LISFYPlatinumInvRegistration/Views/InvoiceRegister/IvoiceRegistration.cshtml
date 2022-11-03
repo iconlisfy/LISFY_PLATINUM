@@ -1,0 +1,1719 @@
+﻿@*@{
+                                        ViewBag.Title = "IvoiceRegistration";
+                                    }
+    <a href="~/Views/Shared/_InvRegistrationLayout.cshtml">~/Views/Shared/_InvRegistrationLayout.cshtml</a>
+    <h2>IvoiceRegistration</h2>*@
+@{
+    //var pages = new List<string> { "Page1", "Page2" };
+    //if (pages.Any(routeUrl.Contains))
+    //{
+    //    Layout = "_Layout";
+    //}
+    //else
+    //{
+    //    Layout = "_Layout1";
+    //}
+    //if()
+    //{
+
+    //}
+    ViewBag.Title = "IvoiceRegistration";
+    Layout = "~/Views/Shared/_InvRegistrationLayout.cshtml";
+    //Layout1 = "";
+}
+
+@using (Html.BeginForm("IvoiceRegistration", "InvoiceRegister", FormMethod.Post, new { id = "InvReqForm", enctype = "multipart/from-data" }))
+{
+    <div class="wrapper">
+
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light bg-blue">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <h4 class="page-heading">Lab Registeration</h4>
+            </ul>
+
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <a href="" class="brand-link">
+                <span class="brand-text font-weight-light client-logo"><img src="dist/img/logo.png" alt="logo"></span>
+            </a>
+
+            <div class="sidebar">
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        @*
+                            <li class="nav-item dropright">
+                                <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    <i class="nav-icon fas fa-th"></i>
+                                    <p>Dashboard <i class="right fas fa-chevron-right"></i></p>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="" class="nav-link">Sample Link</a>
+                                    <a href="" class="nav-link">Sample Link</a>
+                                </div>
+                            </li>*@
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item dropright" style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                                <p id="cng">Front Office <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" id="submenu" class="nav-link">Patient Registration</a>
+                                <a href="" id="submenu" class="nav-link">Edit Invoice</a>
+                                <a href="" id="submenu" class="nav-link">Pending Collection</a>
+                                <a href="" id="submenu" class="nav-link">Cash Closing</a>
+                                <a href="" id="submenu" class="nav-link">Report Dispatching</a>
+                                <a href="" id="submenu" class="nav-link">OP Registration</a>
+                                <a href="" id="submenu" class="nav-link">Cancel Invoice</a>
+                                <a href="" id="submenu" class="nav-link">Billwise Collection</a>
+                                <a href="" id="submenu" class="nav-link">Billwise Collection Area</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection Booking</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection View</a>
+                                <a href="" id="submenu" class="nav-link">Home Collection Pending Coll</a>
+                                <a href="" id="submenu" class="nav-link">Scan Booking</a>
+                                <a href="" id="submenu" class="nav-link">Envelop</a>
+                                <a href="" id="submenu" class="nav-link">PatientView</a>
+                                <a href="" id="submenu" class="nav-link">Result Delivery Status</a>
+                            </div>
+                        </li>
+
+                        @*********************@
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Sample Flow <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu" style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Barcode Generation</a>
+                                <a href="" class="nav-link">Biochemistry Sample Receiving</a>
+                                <a href="" class="nav-link">Haemetology Sample Receiving</a>
+                                <a href="" class="nav-link">Microbiology Sample Receiving</a>
+                                <a href="" class="nav-link">Clinical Pathology Sample Receiving</a>
+                                <a href="" class="nav-link">Sample Tracking</a>
+                                <a href="" class="nav-link">Sample Rejection</a>
+                                <a href="" class="nav-link">Sample Receiving</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Technical <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Result Issuing</a>
+                                <a href="" class="nav-link">Referal Lab Management</a>
+                                <a href="" class="nav-link">TAT out Explanation</a>
+                                <a href="" class="nav-link">Result Register</a>
+                                <a href="" class="nav-link">Test Wise Register</a>
+                                <a href="" class="nav-link">ECHO Report</a>
+                                <a href="" class="nav-link">Work Register(Test Wise)</a>
+                                <a href="" class="nav-link">Work Register(Bill Wise)</a>
+                                <a href="" class="nav-link">Work Order</a>
+                                <a href="" class="nav-link">Attatch Document</a>
+                                <a href="" class="nav-link">Us Scan/X-Ray/Ecg/Mammography Management</a>
+                                <a href="" class="nav-link">Remove authorization</a>
+                                <a href="" class="nav-link">First Level authorization</a>
+                                <a href="" class="nav-link">Second Authorization Queue</a>
+                                <a href="" class="nav-link">Email Queue</a>
+                                <a href="" class="nav-link">Email Radiology Report</a>
+                                <a href="" class="nav-link">Pending Test</a>
+                                <a href="" class="nav-link">covid-19</a>
+                                <a href="" class="nav-link">wrktestreg</a>
+                                <a href="" class="nav-link">edit pend</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Accounts <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Account Ledger</a>
+                                <a href="" class="nav-link">Cash Payments</a>
+                                <a href="" class="nav-link">Cash Receipts</a>
+                                <a href="" class="nav-link">Day Book</a>
+                                <a href="" class="nav-link">Journal</a>
+                                <a href="" class="nav-link">Cheque Issue</a>
+                                <a href="" class="nav-link">Cheque Receipt</a>
+                                <a href="" class="nav-link">Cheque Transaction</a>
+                                <a href="" class="nav-link">TestReqQue</a>
+                                <a href="" class="nav-link">Referallabbilwise</a>
+                            </div>
+                        </li>
+                        @**********************************@
+                        <li class="nav-item dropright " style="position:relative">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Reports <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+
+                            <div class="dropdown-menu " id="SubMenu" style="will-change: transform;width:300px; position: relative; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#dailyclctnstmnts" onclick="toggle_visibility('menu1');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#dailyclctnstmnts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Daily Periodic Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        @*/InvoiceRegister/*@
+                                        @*<a class="popup-fancy"
+                                                 href="@Url.Action(" index", "detail" , new { area="" , id=item.Id })">
+                                                #
+                                            </a>*@
+
+                                        @*<a href="~/Views/LISFY/HomePage.cshtml">~/Views/LISFY/HomePage.cshtml</a>*@
+                                        <div class="dropdown-menu " id="menu1" style="height: 380px; overflow-y: scroll;will-change: transform;width:300px; position: absolute;display:none; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            @*<a href="" data-toggle="modal" data-target="#dailycollectionstmnt" class="nav-link">Daily Collection Statements</a>*@
+                                            @*<a href="" data-toggle="modal" id="dlycltnStmnt" data-target="#dailycollectionstmnt" class="nav-link">Daily Collection Statements</a>*@
+                                            @*<a href="/LISFY/HomePage#dailycollectionstmnt" data-toggle="modal">Daily Collection Statements</a>*@
+                                            <a href="" data-toggle="modal" data-target="/LISFY/HomePage/dailycollectionstmnt" class="nav-link">Daily Collection Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyclctnSmry" class="nav-link">Daily Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyclctnSmry2" class="nav-link">Daily Collection Summary2</a>
+                                            <a href="" data-toggle="modal" data-target="#clctnBrnchWise" class="nav-link">Collection Statement Branch Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#clctnSmryBrnchWise" class="nav-link">Collection Summary Branch Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#dailyCashInvoice" class="nav-link">Daily Cash Invoice</a>
+                                            <a href="" data-toggle="modal" data-target="#pidWiseBillClctn" class="nav-link">Patient ID Wise Bill Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#mnthlyClctnSmry" class="nav-link">Monthly Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#DivisionSummary" class="nav-link">Monthly Collection Division Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#MonthlyCollBrnchWise" class="nav-link">Monthly Collection Summary BranchWise</a>
+                                            <a href="" data-toggle="modal" data-target="#usrWiseClctn" class="nav-link">User Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#usrWiseClctnSmry" class="nav-link">User Wise Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#PatWiseInvoice" class="nav-link">Patient Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWiseInv" class="nav-link">Division Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWiseInv2" class="nav-link">Division Wise Invoices2</a>
+                                            <a href="" data-toggle="modal" data-target="#divWiseSmry" class="nav-link">Division Wise Summary</a>
+                                            @*<a href="" data-toggle="modal" data-target="#PROInvoice" class="nav-link">PRO Perfomance Invoice Wise</a>
+                                                <a href="" class="nav-link">PRO Perfomance Division Wise</a>*@
+                                            <a href="" data-toggle="modal" data-target="#usrTackRpt" class="nav-link">User Track Report</a>
+                                            <a href="" data-toggle="modal" data-target="#brnchWiseInv" class="nav-link">Branch Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#discWiseInv" class="nav-link">Discount Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#CncldInvoices" class="nav-link">Cancelled Invoices</a>
+                                            @*<a href="" class="nav-link">PRO Daily Report</a>*@
+                                            <a href="" data-toggle="modal" data-target="#doctrMeeting" class="nav-link">Doctors Meeting</a>
+                                            <a href="" data-toggle="modal" data-target="#DptWiseInv" class="nav-link">Department Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#DivWisePerfomance" class="nav-link">Division Wise Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#refundStmnts" class="nav-link">Refund Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#DctrVisit" class="nav-link">Doctors List(Visit)</a>
+                                            <a href="" data-toggle="modal" data-target="#newPtntStmnt" class="nav-link">New Patient List</a>
+                                            <a href="" data-toggle="modal" data-target="#SrvceChrgStmnt" class="nav-link">Service Charge Statement</a>
+                                            <a href="" data-toggle="modal" data-target="#oldPtntStmnt" class="nav-link">Old Patient List</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#creditclcnstmnts" onclick="toggle_visibility('menu2');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#creditclcnstmnts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Credit Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu2" style="height: 350px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#crWiseClctn" class="nav-link">Credit CardWise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#insrnceWiseClctn" class="nav-link">Insurance Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#corpInv" class="nav-link">Corporate Invoice</a>
+                                            <a href="" data-toggle="modal" data-target="#corpCollSmry" class="nav-link">Corporate Collection Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpCollSmryDiv" class="nav-link">Corporate Collection Summary(Division)</a>
+                                            <a href="" data-toggle="modal" data-target="#corpOutStndng" class="nav-link">Corporate Outstanding</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDivPerfmnce" class="nav-link">Corporate Division Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#corpTstPrfmnce" class="nav-link">Corporate Test Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#BillWiseClctn" class="nav-link">Billwise Collection Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#BillWiseDue" class="nav-link">Billwise Due Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpPendColl" class="nav-link">Corporate Wise Pending Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#areaWsSmry" class="nav-link">Area Wise Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpMnthSmry" class="nav-link">Corporate Bill Monthly Summary</a>
+                                            <a href="" data-toggle="modal" data-target="#corpMnDetStmnt" class="nav-link">Corporate Monthly Detailed Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDctrStmnt" class="nav-link">Corporate Doctor Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#corpAgntRpt" class="nav-link">Corporate Agent Reports</a>
+                                            <a href="" data-toggle="modal" data-target="#corpDepStmnts" class="nav-link">Corporate Department Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#CorpTstAreaWise" class="nav-link">Corporate Test Perfomance Area Wise</a>
+                                            <a href="" data-toggle="modal" data-target="#CorpBillDet" class="nav-link">Corporate Bill Detailed</a>
+                                            <a href="" data-toggle="modal" data-target="#agntCorpStmnt" class="nav-link">Agent Corporate</a>
+                                            <a href="" data-toggle="modal" data-target="#crLimitStmnt" class="nav-link">Credit Limit Statements</a>
+                                            @*<a href="" class="nav-link" style="font-weight:bold">BHIM/UPI Online Payment Report</a>
+                                                <a href="" class="nav-link" style="font-weight:bold">Corporate Invoice 2</a>*@
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#cashduestmnts" onclick="toggle_visibility('menu3');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#cashduestmnts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Cash Due/Pending Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu3" style="will-change: transform; display:none;position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#pndRgstr" class="nav-link">Pending Register</a>
+                                            <a href="" data-toggle="modal" data-target="#pndRgstr2" class="nav-link">Pending Register2</a>
+                                            <a href="" data-toggle="modal" data-target="#pndClctnReg" class="nav-link">Pending Collection Register</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#DRrefbystmnts" onclick="toggle_visibility('menu4');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#DRrefbystmnts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Doctor/Ref.by Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu4" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#docWiseClctn" class="nav-link">Doctor Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#docPrfmnce" class="nav-link">Doctors Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#docSplzdLst" class="nav-link">Doctors Specialized List</a>
+                                            <a href="" data-toggle="modal" data-target="#hospWiseDocStmnt" class="nav-link">Hospital Wise Doctors List</a>
+                                            <a href="" data-toggle="modal" data-target="#docEnvelop" class="nav-link">Doctors Envelop</a>
+                                            <a href="" data-toggle="modal" data-target="#outDrWiseClctn" class="nav-link">Out Doctors Wise Collection</a>
+                                            <a href="" data-toggle="modal" data-target="#areaWiseDrList" style="display:none" class="nav-link">AreaWiseDrList</a>
+                                            <a href="" class="nav-link" style="display:none">drtestperfomance2</a>
+                                            <a href="" data-toggle="modal" data-target="#NoDrPatLst" class="nav-link">NO Dr Patient Test</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#technicalstmnts" onclick="toggle_visibility('menu5');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#technicalstmnts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Technical statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu5" style="height: 280px; will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#refLabRpt" style="display:none" class="nav-link">Referal Lab</a>
+                                            <a href="" data-toggle="modal" data-target="#removeAuthStmnts" class="nav-link">Remove Authorization Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#rptDispStmnts" class="nav-link">Report Dispatching Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#SmplClctnInv" class="nav-link">Sample Collection/Agent Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#rptDisp2" class="nav-link">Report Dispatching 2</a>
+                                            <a href="" data-toggle="modal" data-target="#timeOvrStmnt" class="nav-link">Time Over Statements</a>
+                                            <a href="" data-toggle="modal" data-target="#authDls" class="nav-link">Authorization Details</a>
+                                            <a href="" data-toggle="modal" data-target="#cust2RsltReg" class="nav-link">Customize2 Result Register</a>
+                                            <a href="" data-toggle="modal" data-target="#nonBarcodedTsts" class="nav-link">Non Barcoded Tests</a>
+                                            <a href="" data-toggle="modal" data-target="#IPOPrpt" class="nav-link">IP/OP Wise Report</a>
+                                            <a href="" class="nav-link">Testwise Result Register</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#teststatements" onclick="toggle_visibility('menu6');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#teststatements" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Test Statements <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu6" style="height: 250px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" data-toggle="modal" data-target="#tstWiseInvce" class="nav-link">Test Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#tstPrfmnce" class="nav-link">Test Perfomance</a>
+                                            <a href="" data-toggle="modal" data-target="#tstPrDivWise" class="nav-link">Test Perfomance(Division Wise)</a>
+                                            <a href="" data-toggle="modal" data-target="#MulTstInvoice" class="nav-link">Multiple Teat Wise Invoices</a>
+                                            <a href="" data-toggle="modal" data-target="#PatTstWise" class="nav-link">Test Wise Patients</a>
+                                            <a href="" class="nav-link">Outside Test Statements</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Doctor Wise Test Perfomance</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">op patient graph report</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">pro dr income report</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">collectioboyincome</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Proincme</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">clientlabindvl</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Ptient Details</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                @*<a href="" class="nav-link">Master Values</a>*@
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#mastervalues" onclick="toggle_visibility('menu7');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#mastervalues" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Master Values <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu7" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                            <a href="" class="nav-link">Test Price List</a>
+                                            <a href="" class="nav-link">Test Detailed</a>
+                                            <a href="" class="nav-link">Doctors List</a>
+                                            <a href="" class="nav-link">Test Detailed(Perform Wise)</a>
+                                            <a href="" class="nav-link">Corporate List</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Doctors List Categorywise</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">dr payment</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">authorization payment</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Pending Statemnts</a>
+                                            <a href="" class="nav-link" style="font-weight:bold">Covid Result Statement</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                @*<a href="" class="nav-link">Accounts</a>*@
+                                <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                                    <li class="nav-item dropright site-menu-item">
+                                        <a href="#" onclick="toggle_visibility('menu8');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#accounts" @*aria-haspopup="true" *@ aria-expanded="true">
+
+                                            <p id="sub">Accounts <i class="right fas fa-chevron-right"></i></p>
+                                        </a>
+                                        <div class="dropdown-menu " id="menu8" style="transform: translate3d(285px, 0px, 0px); display:none;top: 0px; left: 0px;">
+                                            <a href="" class="nav-link">Cash Payments</a>
+                                            <a href="" class="nav-link">Cash Payments Summary</a>
+                                            <a href="" class="nav-link">Cash Receipts</a>
+                                            <a href="" class="nav-link">Cash Receipts Summary</a>
+                                            <a href="" class="nav-link">Ledger</a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                        @**********************************@
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Marketing <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">PRO Hospital Wise</a>
+                                <a href="" class="nav-link">PRO Specialized Wise</a>
+                                <a href="" class="nav-link">Doctors List(No Buissiness)</a>
+                                <a href="" class="nav-link">Doctor Wise Monthly Summary</a>
+                                <a href="" class="nav-link">Monthly Incentive Statements</a>
+                                <a href="" class="nav-link">Set Dr Incentive</a>
+                                <a href="" class="nav-link">Monthly Incentice</a>
+                                <a href="" class="nav-link">Monthly Incentice(DateWise)</a>
+                                <a href="" class="nav-link">Incentive(Division)</a>
+                                <a href="" class="nav-link">Set Dr IncenticeTest</a>
+                                <a href="" class="nav-link">Receiving sample</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Administrator <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+
+                                @*******************************************@
+                                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    @*<i class="nav-icon fas fa-th"></i>*@
+                                    <p>User Settings <i class="right fas fa-chevron-right"></i></p>
+                                </a>
+                                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(170px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                    <a href="" class="nav-link">Create New User</a>
+                                    <a href="" class="nav-link">Change Password</a>
+                                    <a href="" class="nav-link">User Privilege</a>
+                                    <a href="" class="nav-link">Users List</a>
+                                </div>
+
+
+                                @*******************************************@
+                                <a href="" class="nav-link">User Logins</a>
+                                <a href="" class="nav-link">Edited Invoice</a>
+                                <a href="" class="nav-link">Edit Discount</a>
+                                <a href="" class="nav-link">Email Configuration</a>
+                                <a href="" class="nav-link">Create New Finanacial Year</a>
+                                <a href="" class="nav-link">Settings</a>
+                                <a href="" class="nav-link">Remove Barcode Data</a>
+                                <a href="" class="nav-link">Agent Wise Incentive</a>
+                                <a href="" class="nav-link">Convert Invoice</a>
+                                <a href="" class="nav-link">Merge Accounts</a>
+                                <a href="" class="nav-link">Result Letter Head</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright " style="display:none">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <p>Master Settings <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="height: 580px; overflow-y: scroll;will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Test</a>
+                                <a href="" class="nav-link">Doctor</a>
+                                <a href="" class="nav-link">Doctor Schedule</a>
+                                <a href="" class="nav-link">Doctor's Leave</a>
+                                <a href="" class="nav-link">Hospital</a>
+                                <a href="" class="nav-link">Agent</a>
+                                <a href="" class="nav-link">Patient</a>
+                                <a href="" class="nav-link">Employee</a>
+                                <a href="" class="nav-link">Antibiotic</a>
+                                <a href="" class="nav-link">Look Up Entry</a>
+                                <a href="" class="nav-link">Appoinment Session</a>
+                                <a href="" class="nav-link">Set customize1</a>
+                                <a href="" class="nav-link">Set customize2</a>
+                                <a href="" class="nav-link">Set customize3</a>
+                                <a href="" class="nav-link">Set customize4</a>
+                                <a href="" class="nav-link">Set Culture</a>
+                                <a href="" class="nav-link">Set Test Order</a>
+                                <a href="" class="nav-link">Set Antibiotic Order</a>
+                                <a href="" class="nav-link">Set Special Rate</a>
+                                <a href="" class="nav-link">Set Result Template</a>
+                                <a href="" class="nav-link">Contacts</a>
+                                <a href="" class="nav-link">Set Doctor Payments</a>
+                                <a href="" class="nav-link">Assign Study To Doctor</a>
+                                <a href="" class="nav-link">Analyzer</a>
+                                <a href="" class="nav-link">Set Corporate</a>
+                                <a href="" class="nav-link">Set Analyzer Normal Range</a>
+                                <a href="" class="nav-link">Set Doctor</a>
+                                <a href="" class="nav-link">PRO Daily Report</a>
+                                <a href="" class="nav-link">Set Doctor Signature</a>
+                                <a href="" class="nav-link">Members</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropright ">
+                            <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @*<i class="nav-icon fas fa-th"></i>*@
+                                <i class="nav-icon fas fa-question-circle"></i>
+                                <p>Help <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">About Us</a>
+                                <a href="" class="nav-link" style="display:none">Settings</a>
+                                <a href="" class="nav-link" style="display:none">Barcode</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/InvoiceRegister/IvoiceRegistration" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>Inv. Registration</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="/MasterTestDetails/MasterTestDetail" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>Test</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-qrcode"></i>
+                                <p>Barcode/Labeling</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-microscope"></i>
+                                <p>Pending Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-poll"></i>
+                                <p>Result Releasing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-money-bill-alt"></i>
+                                <p>Payments</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>Cash Closing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-calculator"></i>
+                                <p>Calculator</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-check"></i>
+                                <p>Appointment</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-comment-dots"></i>
+                                <p>Chat/Alerts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                @*<i class="nav-icon fas fa-house-user"></i>*@
+                                <i class="nav-icon fa fa-home"></i>
+                                <p>Home Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-envelope-open"></i>
+                                <p>Email List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-bell"></i>
+                                <p>Alarm</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>News & Events</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-user-circle"></i>
+                                <p>About Us</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>Exit</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </aside>
+        <div class="content-wrapper" style="margin-bottom: 42px;">
+
+
+
+            <div class="container-fluid">
+                <h3 class="page-heading">Invoice Registration</h3>
+                <div class="row">
+                    <div class="col-lg-9">
+
+                        <div class="form-bg-div">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Lab ID</label>
+                                        <input type="text" id="invNo" name="invNo" value="@ViewBag.lab_No" readonly required>
+                                        <input type="text" id="yrid" name="yrid" style="display:none" value="@ViewBag.YrDls" readonly required>
+                                        <input type="text" id="cpyid" name="cpyid" style="display:none" value="@ViewBag.CpyDls" readonly required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Pat. ID</label>
+                                        <input type="text" id="patId" name="patId">
+                                        <button class="searchbtn" id="patIdSrchBtn" data-toggle="modal" data-target="#SearchModel" data-backdrop="static" data-keyboard="false">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Date</label>
+                                        @*<input type="text" value="12345" readonly>*@
+                                        <input type="text" id="requestdate" name="requestdate" @*value="12345" *@ readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8">
+                                    <div class="field-item">
+                                        <label for="">Name</label>
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-4">
+                                                <select name="title" id="title">
+                                                    <option value="" selected disabled style="display:none"></option>
+                                                    @*
+                                                        <option></option>*@
+                                                    <option>Mr.</option>
+                                                    <option>Mrs.</option>
+                                                    <option>Ms.</option>
+                                                    <option>Miss.</option>
+                                                    <option>Master.</option>
+                                                    <option>Baby.</option>
+                                                    <option>B/O.</option>
+                                                    <option>Pet.</option>
+                                                    <option>Fr.</option>
+                                                    <option>Dr.</option>
+                                                    <option>Sist.</option>
+                                                    <option>Smt.</option>
+                                                    <option>Sri.</option>
+                                                    <option>C/O Hosp.</option>
+                                                    <option>Km.</option>
+                                                    <option>Justice.</option>
+                                                    <option>Adv.</option>
+                                                    @*
+                                                        <option>Rev.fa</option>*@
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8 col-8">
+                                                <input type="text" id="invName" name="invName" autocomplete="off" required>
+                                                @*<button class="submit-btn nav-link" id="PymntDls" data-toggle="modal" data-target="#paymentModel" data-backdrop="static" data-keyboard="false">
+                                                *@
+                                                <button class="searchbtn" id="patNameSrchBtn" data-toggle="modal" data-target="#SearchModel" data-backdrop="static" data-keyboard="false">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">D.O.B</label>
+                                        @*<input type="date">*@
+                                        <input name="dobDate" id="dobDate" autocomplete="off" type="datetime" style="cursor :default" class="form-control" placeholder="dd/MM/yyyy" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Gender</label>
+                                        <select name="gender" id="gender">
+                                            <option value="" selected disabled style="display:none"></option>
+                                            <option value="">Male</option>
+                                            <option value="">Female</option>
+                                            <option value="">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-8">
+                                    <div class="field-item">
+                                        <label for="">Age</label>
+                                        <div class="row">
+                                            @*patId title invName dobDate gender ageyy agemm agedd*@
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4"><input type="text" placeholder="YY" id="ageyy" name="ageyy" autocomplete="off" required></div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4"><input type="text" placeholder="MM" id="agemm" name="agemm" autocomplete="off" required></div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4"><input type="text" placeholder="DD" id="agedd" name="agedd" autocomplete="off" required></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="field-item">
+                                        <label for="">Phone</label>
+                                        <input type="text" id="Phn" name="Phn">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Email</label>
+                                        <input type="text" id="PatEmail" name="PatEmail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item">
+                                        <label for="">Address</label>
+                                        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <button class="add-morebtn">Add More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-bg-div">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group">
+                                        <label for="">Ref. by</label>
+                                        <input type="search" class="form-control" id="refby" name="refby">
+                                        @*<span id="searchrefby" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" id="refbyId" name="refbyId" style="display:none">
+                                        <i id="refByRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group">
+                                        <label for="">Out Dr.</label>
+                                        <input type="search" class="form-control" id="outDr" name="outDr">
+                                        @*<span id="searchOutdr" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" id="outDrId" style="display:none" name="outDrId">
+                                        <i id="outDrRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group">
+                                        <label for="">Coll. Mode</label>
+                                        <input type="search" class="form-control" value="" id="collMode" name="collMode" required>
+                                        @*<span id="searchColMode" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" style="display:none" id="collModeId" name="collModeId" value="@ViewBag.CollDls">
+                                        <i id="colModeRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group" id="clinicDiv">
+                                        <label for="">Clinic</label>
+                                        <input type="search" class="form-control" id="clinic" name="clinic" />
+                                        @*<span id="searchClinic" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" id="clinicId" style="display:none" name="clinicId">
+                                        <i id="clncRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group">
+                                        <label for="">Corporate</label>
+                                        <input type="search" class="form-control" id="corporate" name="corporate">
+                                        @*<span id="searchCorp" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" id="corpKey" style="display:none" name="corpKey">
+                                        <i id="CorpRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item btn-group">
+                                        <label for="">Coll. Staff</label>
+                                        <input type="search" class="form-control" id="collPerson" name="collPerson">
+                                        @*<span id="searchCollStaff" class="glyphicon glyphicon-remove-circle"></span>*@
+                                        <input type="text" style="display:none" id="collPersonId" name="collPersonId">
+                                        <i id="colStfRfrsh"><img src="~/fonts/gl-refresh.svg" style="width:20px;height:20px" /></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="field-item">
+                                        <label for="">Ip Op</label>
+                                        <input type="text" id="ipoptxt" name="ipoptxt" autocomplete="off">
+                                    </div>
+                                </div>
+                                @*<div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group date" id="datetimepickerChk" data-target-input="nearest">
+                                                <input type="text" id="checkss" class="form-control datetimepicker-input" data-target="#datetimepickerChk" />
+                                                <div class="input-group-append" data-target="#datetimepickerChk" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+
+                        <div class="row justify-content-center form-image">
+                            <div class="col-lg-6 col-md-4 col-sm-4 col-6">
+                                <div class="scan-image-thumb" id="a">
+                                    <a href="" class="closebtn"><i class="fas fa-times"></i></a>
+                                    <a href="" id="chk" class="zoombtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fas fa-search tst" id="SrchScan1"></i>
+                                    </a>
+                                    <img src="dist/img/placeholder.jpg" class="lazy" id="picture1" alt="image" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center form-image">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                <div class="scan-image-thumb imagebtm" id="a">
+                                    <a href="" class="closebtn"><i class="fas fa-times"></i></a>
+                                    <a href="" id="chk" class="zoombtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fas fa-search tst" id="SrchScan2"></i>
+                                    </a>
+                                    <img src="dist/img/placeholder.jpg" id="picture2" alt="image" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                <div class="scan-image-thumb imagebtm" id="a">
+                                    <a href="" class="closebtn"><i class="fas fa-times"></i></a>
+                                    <a href="" id="chk" class="zoombtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fas fa-search tst" id="SrchScan3"></i>
+                                    </a>
+                                    <img src="dist/img/placeholder.jpg" id="picture3" alt="image" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                <div class="scan-image-thumb imagebtm" id="a">
+                                    <a href="" class="closebtn"><i class="fas fa-times"></i></a>
+                                    <a href="" id="chk" class="zoombtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fas fa-search tst" id="SrchScan4"></i>
+                                    </a>
+                                    <img src="dist/img/placeholder.jpg" id="picture4" alt="image" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="table-responsive test-table">
+                    <table class="table table-bordered" id="tstAddTable">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="6%">Sl #</th>
+                                <th scope="col">Test Code</th>
+                                <th scope="col">Test Name</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">Disc Amt</th>
+                                <th scope="col">Disc. %</th>
+                                <th scope="col">Total</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+
+                                <td style="width:120px"><input type="text" id="testcode" name="testcode" autocomplete="on"></td>
+                                <td><input type="text" id="testname" name="testname" autocomplete="on"></td>
+                                <td><input type="text" id="testrate" name="testrate" readonly></td>
+                                <td><input type="text" id="testDiscAmt" name="testDiscAmt" readonly></td>
+                                <td><input type="text" id="testDiscPer" name="testDiscPer" readonly></td>
+                                <td><input type="text" id="testTotal" name="testTotal" readonly></td>
+                                <td><button id="tstAdd"><i class="fas fa-plus"></i></button></td>
+                                <td style="display:none"><input type="text" name="testId" id="testId"></td>
+                                <td style="display:none"><input type="text" name="testType" id="testType"></td>
+                                <td style="display:none"><input type="text" name="testRptDay" id="testRptDay"></td>
+                                <td style="display:none"><input type="text" name="testRptTimeDays" id="testRptTimeDays"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered" id="tstTable">
+                        <thead style="display:none">
+                            <tr>
+                                <th scope="col" width="6%">Sl #</th>
+                                <th scope="col">Test Code</th>
+                                <th scope="col">Test Name</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">Disc Amt</th>
+                                <th scope="col">Disc. %</th>
+                                <th scope="col">Total</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+
+                                <td style="width:70px" id="slno" name="slno" readonly></td>
+                                <td style="width:125px;font-size:12px;text-align:center" id="tscode" name="tscode"></td>
+                                <td style="width:50px;display:none"><input type="text" style="width:100%;" id="tsId" name="tsId"></td>
+                                <td style="width:540px;font-size:12px;text-align:center" id="tsname" name="tsname"></td>
+                                <td style="width:96px;font-size:12px;text-align:center" id="tsrate" name="tsrate"></td>
+                                <td style="width:95px;font-size:12px;text-align:center" id="tsDisc" name="tsDisc"></td>
+                                <td style="width:96px;font-size:12px;text-align:center" id="tsDscPer" name="tsDscPer"></td>
+                                <td style="width:97px;font-size:12px;text-align:center" id="tsTotal" name="tsTotal"></td>
+
+                                <td style="width:50px;display:none"><input type="text" style="width:100%;" id="tstType" name="tstType"></td>
+                                <td style="width:50px;display:none"><input type="text" style="width:100%;" id="tstrptDay" name="tstrptDay"></td>
+                                <td style="width:50px;display:none"><input type="text" style="width:100%;" id="tstrptTimedys" name="tstrptTimedys"></td>
+                                <td style="width:3.6%"><button class="close-button" id="tstDelete"><i class="fas fa-times"></i></button></td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container-fluid">
+
+                <div class="form-bg-div">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Sample On</label>
+                                        <div class="form-group">
+                                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                                <input type="text" id="SampleOn" name="SampleOn" class="form-control datetimepicker-input datepicker" data-target="#datetimepicker1" />
+                                                @*<input name="sampleOn" id="sampleOn" autocomplete="off" type="text" style="cursor :default" data-target="#datetimepicker1" class="form-control datetimepicker-input" placeholder="@ViewBag.currntDate">*@
+                                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Result On</label>
+                                        <div class="form-group">
+                                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                                @*<input name="ResultOn" id="ResultOn" autocomplete="off" type="text" style="cursor :default" class="form-control" placeholder="@ViewBag.currntDate" readonly>*@
+                                                <input type="text" id="ResultOn" name="ResultOn" class="form-control datetimepicker-input datepicker" data-target="#datetimepicker2" />
+                                                @*<input type="date" id="ResultOn" class="form-control datetimepicker-input" data-target="#datetimepicker2" />*@
+                                                @*<input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" />*@
+                                                <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="field-item">
+                                        <label for="">Note</label>
+                                        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-8">
+                            <div class="emergency-sample">
+                                <input type="checkbox" name="EmrgencySmple" id="EmrgencySmple">
+                                <label for="">Emergency Sample</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12">
+                            <div class="reporting-mode">
+                                <label for="">Reporting Mode</label>
+                                <ul>
+                                    <li><input type="checkbox" name="rptPrsnly" id="rptPrsnly"> Personally</li>
+                                    <li><input type="checkbox" name="rptWhtsApp" id="rptWhtsApp"> WhatsApp</li>
+                                    <li><input type="checkbox" name="rptCourier" id="rptCourier"> Courier</li>
+                                    <li><input type="checkbox" name="rptEmail" id="rptEmail"> Email</li>
+                                    <li><input type="checkbox" name="rptSMS" id="rptSMS"> SMS</li>
+                                    <li><input type="checkbox" name="rptTelePhn" id="rptTelePhn"> Telephone</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="field-item pl-0">
+                                <input type="text" placeholder="Other" id="otherCmnt" name="otherCmnt">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        @***********************************************************************@
+        <div class="modal fade" id="paymentModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true" style="display:none">
+            <div class="modal-dialog modal-dialog-centered modal-popup payment-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Payment Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-bg-div create-user-div">
+
+
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="field-item">
+                                        <label for="">Total</label>
+                                        <input type="text" id="total" name="total">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="discount-checkbox">
+                                        <input type="checkbox" name="mycheckbox" id="mycheckbox" value="0" />
+                                        <label for="mycheckbox">Discount</label>
+
+                                        <span class="pay-icons">
+                                            <img src="@Url.Content("~/Content/PaymentTemplate/dist/img/cash.png")" alt="" id="cash-icon" />
+                                            <img src="@Url.Content("~/Content/PaymentTemplate/dist/img/upi.png")" alt="" id="upi-icon" />
+                                            <img src="@Url.Content("~/Content/PaymentTemplate/dist/img/mastercard.png")" alt="" id="visa-icon" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" id="mycheckboxdiv" style="display:none">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="field-item">
+                                        <label for="">Discount</label>
+                                        <input type="text" id="DiscAmt" name="DiscAmt" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="discount-reason">
+                                        <input type="text" id="DiscReason" name="DiscReason" placeholder="Discount Reason">
+                                        <input type="text" id="DiscRsnID" name="DiscRsnID" style="display:none">
+                                        <input type="text" id="DiscRsnVal" name="DiscRsnVal" style="display:none">
+                                        @*<button class="searchbtn"><i class="fas fa-search"></i></button>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="field-item">
+                                        <label for="">S.Charge</label>
+                                        <input type="text" id="SChrge" name="SChrge" autocomplete="off">
+                                    </div>
+                                    <div class="field-item payment-mode">
+                                        <label for="">Paymode</label>
+                                        <select id="Paytype" name="Paytype">
+                                            <option value="" selected></option>
+                                            @*
+                                                <option value="" disabled selected></option>*@
+                                            <option value="1">Cash</option>
+                                            <option value="2">Debit/Credit</option>
+                                            <option value="3">Credit</option>
+                                            <option value="4">BHIM/UPI</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <h5 class="netamount">
+                                        @*Net Amount*@
+                                        <font id="netamt" style="margin-right: 110px;">
+                                            <i class="fas fa-rupee-sign"></i>&#8377;0<span>&#8725;&#9592;</span>
+                                        </font>
+                                    </h5>
+                                </div>
+                            </div>
+
+
+                            <div class="cashbank-div" id="row_dim">
+                                <h6>Cash</h6>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="field-item">
+                                            <label for="">Paid Amount</label>
+                                            <input type="text" id="PaidAmt" name="PaidAmt" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Balance</label>
+                                            <input type="text" id="balance" name="balance" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cashbank-div" id="row_dim2">
+                                <h6>BHIM/UPI</h6>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Bank A/C</label>
+                                            <input type="text" id="bankName" name="bankName">
+                                            <input type="text" id="bankKey" name="bankKey" style="display:none">
+                                            <input type="text" id="bankMobile" name="bankMobile" style="display:none">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Card No</label>
+                                            <input type="text" id="BnkCrdNo" name="BnkCrdNo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cashbank-div" id="row_dim3">
+                                <h6>Debit/Credit</h6>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Bank A/C</label>
+                                            <input type="text" id="BnkName" name="BnkName">
+                                            <input type="text" id="bankId" name="bankId" style="display:none">
+                                            <input type="text" id="bankMob" name="bankMob" style="display:none">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Card No</label>
+                                            <input type="text" id="BnkCrdNum" name="BnkCrdNum">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cashbank-div" id="row_dim4">
+                                <h6>Credit</h6>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-item payment-paddingleft">
+                                            <label for="">Corporate</label>
+                                            <input type="text" id="PayCorp" name="PayCorp">
+                                            <input style="display:none" type="text" id="PayCorpId" name="PayCorpId">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="bleu-btn" id="btnExit" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i> Exit</button>
+                        <button class="submit-btn" id="btnSave"><i class="fas fa-save"></i> Save Bill</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @************************************************************************@
+        <div class="modal fade" id="SearchModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true" style="display:none">
+            <div class="modal-dialog modal-dialog-centered modal-popup payment-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search Patient</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-bg-div create-user-div">
+
+
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <select id="SrchOptn" style="width: 90px;background:#dbe9f9;width: 100%;height: 26px;background: none;border: 1px solid #bed0e3;border-radius: 3px;outline: navajowhite;font-size: 14px;padding-left: 10px;background: #dbe9f9;">
+                                        <option>Name</option>
+                                        <option>Pat.Id</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="" style="padding-left: 15px">
+                                        <input type="text" id="PatDtl" name="PatDtl" style="background:#dbe9f9;width: 100%;height: 26px;background: none;border: 1px solid #bed0e3;border-radius: 3px;outline: navajowhite;font-size: 14px;padding-left: 10px;background: #dbe9f9;">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                @*<table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Code</th>
+                                            <th>Phno</th>
+                                            <th>Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>gf</td>
+                                            <td>dfgdf</td>
+                                            <td>657567567</td>
+                                            <td>bghjghj</td>
+                                        </tr>
+                                    </table>*@
+                                <div class="container-fluid">
+                                    <div class="table-responsive test-table">
+                                        <table class="table-bordered" id="patDlstTable">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" width="30%">Name</th>
+                                                    <th scope="col" width="10%">Code</th>
+                                                    <th scope="col" width="50%">Addtress</th>
+                                                    @*
+                                                        <th scope="col" style="display:none">Mobile No</th>*@
+                                                    <th scope="col" width="20%">Mobile No</th>
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                @if (ViewBag.patDls != null @*&& ViewBag.patDls.Count > 0*@)
+                                                {
+                                                    foreach (var patdls in ViewBag.patDls)
+                                                    {
+                                                        <tr>
+
+                                                            <td id="pname" name="pname">@patdls.AhMst_pName</td>
+                                                            <td id="code" name="code">@patdls.AhMst_Code</td>
+                                                            <td id="addrss" name="addrss">@patdls.AhMst_Address</td>
+                                                            <td id="mobNo" name="mobNo">@patdls.AhMst_Phno</td>
+
+                                                        </tr>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <tr>
+                                                        <td id="pname" name="pname"></td>
+                                                        <td id="code" name="code"></td>
+                                                        <td id="addrss" name="addrss"></td>
+                                                        <td id="mobNo" name="mobNo"></td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*************************************************************************@
+        <footer class="main-footer footer-btns form1-footer">
+            <button class="bleu-btn" id="newInvoice"><i class="fas fa-plus"></i> New</button>
+            <button class="bleu-btn" id="invPrint"><i class="fas fa-print"></i> Print</button>
+            <button class="bleu-btn" id="invPrevious"><i class="fas fa-arrow-left mr-0"></i></button>
+            <button class="bleu-btn" id="invNext"><i class="fas fa-arrow-right mr-0"></i></button>
+            <ul class="footer-checkbox">
+                <li><input type="checkbox" name="billFormat2" id="billFormat2"> Bill Format 2</li>
+                <li><input type="checkbox" name="PrntPrview" id="PrntPrview"> Print Preview</li>
+            </ul>
+            @*<button class="submit-btn nav-link" id="PymntDls">Add to Payment</button>*@
+            <button class="submit-btn nav-link" id="PymntDls" data-toggle="modal" data-target="#paymentModel" data-backdrop="static" data-keyboard="false">
+                Add to Payment
+            </button>
+
+            <div class="float-right lisfy-logo">
+                <h4 id="grandTotal"><span>&#8377;</span>0</h4>
+            </div>
+
+        </footer>
+    </div>
+}
+@section Scripts{
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Content/logintemplate/dist/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"></script>
+    @***********************************************************************************@
+    <link href="~/Content/PaymentTemplate/dist/css/adminlte.min.css" rel="stylesheet" />
+    <link href="~/Content/PaymentTemplate/dist/css/style.css" rel="stylesheet" />
+    <script src="~/Content/PaymentTemplate/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <link href="~/Content/PaymentTemplate/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <script src="~/scripts/PlatinumRegistration.js"></script>
+    @**************************************tdyyy**********************@
+    @*<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>*@
+    @*****************************************************************@
+    <script src="~/Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="~/Scripts/DWTSample_ScanAndUpload.js"></script>
+    <script src="~/Resources/dynamsoft.webtwain.config.js"></script>
+    @************************************************************************@
+    <script type="text/javascript" src="//cdn.asprise.com/scannerjs/scanner.js"></script>
+    <script type="text/javascript" src="//asprise.azureedge.net/scannerjs/scanner.js"></script>
+    @*<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>*@
+    <script>
+        //$('.navbar-nav a').on('click', function () {
+        //    $('.navbar-nav').find('li.active').removeClass('active');
+        //    $(this).parent('li').addClass('active');
+        //});
+        $("#invPrint").on('click', function () {
+            event.preventDefault();
+            var invNo = $("#invNo").val();
+            var corpKey = $("#corpKey").val();
+            var cpyid = $("#cpyid").val();
+            var yrid = $("#yrid").val();
+
+            var PatPrntObj = {
+                Inv_No: invNo,
+                Inv_InsId: corpKey,
+                Inv_CpyId: cpyid,
+                Inv_YrId: yrid
+            }
+            $.ajax({
+                url: "/InvoiceRegister/PatientPrint",
+                type: "POST",
+                data: JSON.stringify(PatPrntObj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data.Result === "OK") {
+                        window.location = "/InvoiceRegister/PDFPatientPrint";
+                    }
+                    else {
+
+                    }
+                }
+            })
+        })
+        //$(".outerDiv").on('click', function () {
+        //    alert(e.target.className);
+        //})
+        //$(document).ready(function () {
+        //    $('.outerDiv').click(function (e) {
+        //        alert(e.target.className);
+        //    });
+        //});
+        $(".zoombtn").on('click', function (e) {
+            var btnId = $(this).find(".fa-search").attr("id");
+            var imgId = $(this).parent().find("img").attr("id");
+            //var imgId = $(this).parentsUntil("#a").attr("id");
+            //var imgIsd = $(this).find(".lazy").attr("id");
+            var scanImg;
+            if (btnId == "SrchScan1") {
+                scanImg = 1;
+            }
+            else if (btnId == "SrchScan2") {
+                scanImg = 2;
+            }
+            else if (btnId == "SrchScan3") {
+                scanImg = 3;
+            }
+            else if (btnId == "SrchScan4") {
+                scanImg = 4;
+            }
+            $.ajax({
+                url: "/InvoiceRegister/ScanImage",
+                type: "POST",
+                data: JSON.stringify({ scanImage: scanImg }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data.Result === "OK") {
+                        var x = data.Record;
+                        $(imgId).attr("src", x);
+                        //alert("Order Request(s) saved");
+                        //window.location = "/InvoiceRegister/IvoiceRegistration";
+                    }
+                    else if (data.Result === "NoScanner") {
+                        alert("No Scanner Available!");
+                    }
+
+                }
+
+            })
+
+        })
+    </script>
+    <style>
+        #dobDate:focus {
+            background: #b6ff00;
+        }
+
+        #dobDate {
+            background: white;
+        }
+
+        #refby, #corporate, #outDr, #clinic, #collPerson, #collMode {
+            /*$('#sample').css('background-color' , '#DEDEDE');*/
+            background: white;
+        }
+
+        #ipoptxt {
+            width: 93.6%;
+        }
+
+        #chk::after {
+            white-space: pre;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.5em;
+            height: 0.9em;
+        }
+
+        ::-webkit-scrollbar-button {
+            background: #ccc;
+        }
+
+        ::-webkit-scrollbar-track-piece {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #eee;
+        }
+
+        table td, th {
+            border: 1px solid #000000;
+        }
+
+        #RefByTable {
+            border-collapse: collapse;
+            margin-right: 0px;
+            margin-left: 0px;
+            border-right: 1px solid green;
+            border-bottom: 1px solid green;
+        }
+
+        #RefByTD {
+            border-left: 1px solid green;
+            border-top: 1px solid green;
+            width: 200px;
+            height: 35px;
+            position: relative;
+        }
+    </style>
+    <style>
+        .SrchFieldItm {
+            padding-left: 15px !important;
+        }
+
+        #tstRow.normal td {
+            color: black;
+            background-color: white;
+        }
+
+        #tstRow.highlighted td {
+            color: white;
+            background-color: red;
+        }
+
+        #ui-datepicker-div {
+            width: 20%;
+        }
+
+        #tstSrchTble th, #tstSrchTble td {
+            padding: 0.2rem;
+        }
+
+        .ui-menu .ui-menu-item:hover {
+            background-color: #517ca1;
+            background: #517ca1;
+            color: white;
+            border-color: #517ca1;
+        }
+
+        .ui-corner-all .ui-state-hover {
+            background-color: #517ca1;
+            background: #517ca1;
+            color: white;
+            border-color: #517ca1;
+        }
+
+        .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+            background-color: #517ca1;
+            color: white;
+            background: #517ca1;
+            border-color: #517ca1;
+        }
+
+        .ui-corner-all .ui-state-hover {
+            background-color: #517ca1;
+            background: #517ca1;
+            color: white;
+            border-color: #517ca1;
+        }
+
+        .ui-widget-content a {
+            font-size: 12px;
+        }
+    </style>
+    <style>
+        #project-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        #project-icon {
+            float: left;
+            height: 32px;
+            width: 32px;
+        }
+
+        #project-description {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ui-widget-content {
+            overflow-y: scroll;
+            height: 220px;
+            width: 218px;
+        }
+
+        .ui-datepicker {
+            color: #428bca;
+            background-color: #A7C7E7;
+            border: 2px solid #3895D3;
+        }
+
+        .ui-datepicker-calendar td.ui-datepicker-today a {
+            background: #428bca;
+        }
+
+        .ui-datepicker-calendar a.ui-state-active {
+            background: #A7C7E7;
+        }
+        /*.ui-widget-header*/
+        .ui-datepicker-year {
+            background-color: #91BAD6;
+        }
+
+        .ui-datepicker-month {
+            background-color: #91BAD6;
+        }
+
+        .ui-menu .ui-menu-item {
+            padding: 0px 0px 0px 0px;
+        }
+    </style>
+    <style>
+         input[type="text"]:focus, textarea:focus, #tstrpt:focus, #tstRptOnDMY:focus {
+            background: #b6ff00;
+        }
+         .ui-autocomplete-input:focus
+         {
+             background: #b6ff00;
+         }
+        #container {
+            position: relative;
+            width: 80%;
+            margin: 5% auto;
+            background-color: black;
+            box-shadow: -2px -2px 5px white,2px -2px 5px white;
+        }
+
+            #container > nav {
+                width: 100%;
+                display: flex;
+                max-height: 60px;
+            }
+
+        #logo {
+            line-height: 60px;
+            font-size: 30px;
+            padding: 0 50px;
+            color: white;
+            width: 40%;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px;
+        }
+
+        #container > nav > ul {
+            margin: 0;
+            paddding: 0;
+            list-style-type: none;
+            display: flex;
+            position: absolute;
+            right: 50px;
+            /*   min-width:60%; */
+        }
+
+            #container > nav > ul > li {
+                line-height: 60px;
+                margin: 0 0px;
+                padding: 0;
+                text-align: center;
+                display: inline-block;
+                /*   background-color:green; */
+                min-width: 120px;
+            }
+
+                #container > nav > ul > li > a {
+                    position: relative;
+                    /*   background-color:red; */
+                    margin: 0 20px;
+                    color: white;
+                }
+
+                #container > nav > ul > li:hover {
+                    border-bottom: 2px solid white;
+                    background-color: #0088ff;
+                }
+
+            #container > nav > ul > .dropdown:hover {
+                border-bottom: none;
+            }
+
+                #container > nav > ul > .dropdown:hover > .dd {
+                    display: block;
+                }
+
+        .dropdown:hover > a .fa-caret-down {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #container > nav > ul > li > div {
+            position: absolute;
+            padding: 0 10px;
+            background-color: black;
+            display: none;
+            background-color: aliceblue;
+            min-width: 100px;
+        }
+
+            #container > nav > ul > li > div > ul {
+                margin: 0px 0 10px 0;
+                padding: 0;
+                list-style: none;
+            }
+
+        #u_a_c {
+            position: relative;
+            width: 100%;
+            /*   background-color:red; */
+        }
+
+        #up_arrow {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            left: 42%;
+            top: -10px;
+            background-color: aliceblue;
+            transform: rotate(45deg);
+        }
+
+        #container > nav > ul > li > div > ul > li:hover {
+            background-color: rgba(0,0,0,0.2);
+        }
+
+        #container > nav > ul > li > div > ul > li > a {
+            padding: 5px;
+            color: black;
+        }
+    </style>
+}
+
+
