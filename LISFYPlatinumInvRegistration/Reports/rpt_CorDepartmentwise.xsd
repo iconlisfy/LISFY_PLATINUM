@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dept">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvItm_key" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_Invno" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_TstId" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_rate" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_Orgrate" type="xs:int" minOccurs="0" />
+              <xs:element name="Area" type="xs:string" minOccurs="0" />
+              <xs:element name="TstMst_Key" type="xs:double" minOccurs="0" />
+              <xs:element name="TstMst_name" type="xs:string" minOccurs="0" />
+              <xs:element name="TstMst_TypeId" type="xs:double" minOccurs="0" />
+              <xs:element name="TstMst_Rate" type="xs:double" minOccurs="0" />
+              <xs:element name="Corporate" type="xs:string" minOccurs="0" />
+              <xs:element name="TstMst_DivsnId" type="xs:double" minOccurs="0" />
+              <xs:element name="TstMst_TechId" type="xs:int" minOccurs="0" />
+              <xs:element name="Inv_No" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Inv_time" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_ItemDisc" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_InsId" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_DrId" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_GrosAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_PayMode" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_DiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Netamt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_RcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_BalAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CurBalAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CurRcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_ItemDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_SmplId" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_SmplStats" type="xs:int" minOccurs="0" />
+              <xs:element name="TstMst_ShortName" type="xs:string" minOccurs="0" />
+              <xs:element name="DeptName" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_OutDr" type="xs:string" minOccurs="0" />
+              <xs:element name="Doctor" type="xs:string" minOccurs="0" />
+              <xs:element name="AhMst_pName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInterval" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

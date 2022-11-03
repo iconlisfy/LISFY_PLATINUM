@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cheque_x0020_Transaction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bank" type="xs:string" minOccurs="0" />
+              <xs:element name="HeadName" type="xs:string" minOccurs="0" />
+              <xs:element name="vchr_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vchr_Narration" type="xs:string" minOccurs="0" />
+              <xs:element name="vchr_ChqNo" type="xs:string" minOccurs="0" />
+              <xs:element name="vchr_ChqDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vchr_Payment" type="xs:double" minOccurs="0" />
+              <xs:element name="vchr_Receipt" type="xs:double" minOccurs="0" />
+              <xs:element name="vchr_TransType" type="xs:string" minOccurs="0" />
+              <xs:element name="vchr_ChqPassed" type="xs:int" minOccurs="0" />
+              <xs:element name="vchr_TransNo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="_x005B_dbo_x005D_._x005B_Company_Mst_x005D_">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

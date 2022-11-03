@@ -1,0 +1,301 @@
+﻿@{
+    @*@model LISFYPlatinumInvRegistration.Models.accountledgercs*@
+
+    // @model IEnumerable<REGISTRATIONTEST.Models.AccountHeads_Mst>
+    //ViewBag.Title = "USERACCOUNTLEDGER";
+
+    Layout = "~/Views/Shared/_account.cshtml";
+}
+
+<div class="modal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" id="accountledger" style="z-index:1600;display:none ">
+    @*<div class="modal fade" id="myModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    *@
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Account Ledger</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeaccledger" style="background-color:#428bca">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-bg-div">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Ledger Name</label>
+                                <input type="text" id="Ahmst_key" style="display:none" required="" class="fcs">
+                                <input type="text" id="ledgername" name="ledgername" class="bold-input-field fcs" onkeyup="if ( event.keyCode == 27 ) this.value=''" >
+                                @*<input type="text" class="form-control" id="ledgername">*@
+                                <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="accledg"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">A/c group Name</label>
+                                <input type="text" id="acgrpname" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" id="acgrpid" style="display:none">
+                                <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="accgrp"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Group</label>
+                                <input type="text" id="group" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" id="GPid" style="display:none">
+                                <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="grptype"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Customer Type</label>
+                                <input type="text" id="customertype" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" id="customertypeid" style="display:none">
+                                <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="custtype"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Scheme</label>
+                                <input type="text" id="scheme" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" id="schemeid" style="display:none">
+                                <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="schme"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <ul class="avoid-letterhead-sms">
+                                    <li>
+                                        <label for="avoid-letter-head">
+                                            <input type="checkbox" name="" class="avoidle"
+                                                   id="avoidletterhead">Avoid Letter Head
+                                        </label>
+                                    </li>
+                                    @*
+                                        <li>
+                                        <label for="avoid-sms">
+                                        <input type="checkbox" name=""
+                                        id="avoidsms">Avoid
+                                        Sms
+                                        </label>
+                                        </li>*@
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item opening-balance">
+                                <label for="">Opening Balance</label>
+                                <div class="row">
+                                    <div class="col-8"><input type="text" id="openingbalance" class="fcs"></div>
+                                    <div class="col-4">
+                                        <select name="" id="cd" class="fcs">
+                                            @*
+                                                <option></option>*@
+                                            <option value="" selected disabled style="display:none"></option>
+                                            <option value="">Cr</option>
+                                            <option value="">Dr</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="field-item credit-padding">
+                                <label for="">Credit Days</label>
+                                <input type="text" id="creditdays" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="field-item credit-padding">
+                                <label for="">Credit Limit</label>
+                                <input type="text" id="creditlimit" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Address</label>
+                                <textarea class="textarea-style fcs" name="" id="Address" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Area</label>
+                                <input type="text" id="Area" class="fcs">
+                                <input type="text" id="Areaid" style="display:none">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item" id="modediv">
+                                <label for="">Mode</label>
+
+
+                                <select id="mode" class="mode1 fcs">
+                                    <option value="" selected disabled ></option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Phone</label>
+                                <input type="text" id="phone" class="fcs numericOnly">
+                                <span id="spnPhoneStatus"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Mobile</label>
+                                <input type="text" id="mobile" class="fcs numericOnly">
+                                <span id="spnPhoneStatus"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Email</label>
+                                <input name="email" type="email" id="email" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <ul class="email-active-list">
+                                    <li>
+                                        <label for="email-report">
+                                            <input id="chkEmailReport"
+                                                   type="checkbox">Email
+                                            Report
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="isactive">
+                                            <input id="isactive"
+                                                   type="checkbox" checked>IsActive
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Discount %</label>
+                                <input type="text" id="discount" class="fcs numericOnly">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="field-item">
+                                <label for="">Test Discount %</label>
+                                <input type="text" id="testdiscount" class="fcs numericOnly">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Description</label>
+                                <textarea class="textarea-style fcs" name="" id="Description" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="field-item">
+                                <input class="bold-input-field fcs" type="text" id="amt" value="00.00" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="bleu-btn" id="newacc"><i class="fas fa-plus"></i> New</button>
+                <button class="bleu-btn" id="accledgExit"><i class="fas fa-times"></i> Exit</button>
+                <button class="submit-btn" id="saveaccount"><i class="fas fa-save"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="searchlookup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="z-index:2000;display:none;position:fixed;text-align: center; left:8%;top:8%;
+        right: 0;">
+       
+    <div id="spinner-div">
+        <div class="spinner-border text-primary" role="status">
+        </div>
+    </div>
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content" style="width:500px"  id="modelsize">
+           
+            <div class="modal-header">
+                <h5 class="modal-title" id="lookupLabel"></h5>
+                <button type="button" class="close searchledgerclose" data-dismiss="modal" aria-label="Close" style="background-color:#428bca" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                
+                    <div class="form-bg-div">
+
+                        <div class="row">
+                            <div class="col-lg-12">
+
+
+
+                                <select style="height:30px; width: 120px;" id="featuredSelectField" class="account1">
+                                    <option value="1" id="account">Account</option>
+                                    <option value="2" id="code">Code</option>
+                                    <option value="3" id="type">Type</option>
+                                </select>
+                                <input type="text" id="txt" style="width:300px;" />
+
+                                <div class="row">
+                                    <div class="container-fluid" id="scroller">
+
+                                        <div class="table-responsive test-table" id="selector">
+                                           
+                                            <table class="table-bordered" id="lookuptbhead">
+
+                                                <thead>
+                                                    <tr>
+
+                                                        <th scope="col" style="width: 400px" id="header">Account Name</th>
+                                                        <th scope="col" style="width:60px;" id="header2">Type</th>
+                                                        <th scope="col" style="display:none"id="header3">Type</th>
+                                                        <th scope="col" style="display:none" id="header4"></th>
+                                                        <th scope="col" style="display:none" id="header5"></th>
+                                                        <th scope="col" style="display:none" id="header7"></th>
+                                                        <th scope="col" style="display:none" id="header8"></th>
+                                                        <th scope="col" style="display:none" id="header9"></th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                            <table class="table-bordered" id="lookuptb">
+                                                @*<thead>
+                                        <tr>
+
+                                            <th scope="col" style="width: 400px;text-align:center" id="header">Account Name</th>
+                                            <th scope="col" style="width: 120px;" id="header2">Type</th>
+                                            <th scope="col" style="display:none" id="header2">Type</th>
+
+                                        </tr>
+                                    </thead>*@
+
+                                                <tbody id="tbody1">
+                                                    <tr></tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+              
+            </div>
+
+        </div>
+        </div>
+    </div>
+@*</div>*@

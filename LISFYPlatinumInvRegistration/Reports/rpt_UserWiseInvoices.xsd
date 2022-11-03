@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInterval" type="xs:string" minOccurs="0" />
+              <xs:element name="DeptType" type="xs:string" minOccurs="0" />
+              <xs:element name="CashPaySum" type="xs:float" minOccurs="0" />
+              <xs:element name="cashRecipts" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NetAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="RecAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="UserName" type="xs:string" minOccurs="0" />
+              <xs:element name="Usr_EmpId" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPending">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PendAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="PendCard" type="xs:double" minOccurs="0" />
+              <xs:element name="PendCheq" type="xs:double" minOccurs="0" />
+              <xs:element name="PndC_UsrId" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtUsr">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Usr_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Usr_EmpId" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

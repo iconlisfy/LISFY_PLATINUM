@@ -1,0 +1,23 @@
+﻿<div class="modal-dialog modal-lg textEditor " style="">
+    <div class="modal-content box inner-outline" style="width:360px;margin-left:300px;margin-top:80px;border-color: #808080;">
+        <div class="modal-body modal-popup " style="height:140px;width:360px;">
+            <button type="button" class="close" id="DivInv2Close" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="row buttons-header " style="border:0px solid #808080;width:356px;margin-left:5px;height:60px">
+                <div class="col-lg-7 col-md-4 " style="margin-left:10px;margin-top:29px">
+                    <label style="margin-top:8px;">From</label>
+                    <input name="DivfrmDate" id="DivfrmDate" @*type="datetime"*@ style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control" value="@ViewBag.FROMDATE" readonly>
+
+                    <input type="" style="display:none;margin-top:10px" id="DivfrmCalender" alt="tests" />
+
+                </div>
+                <div class="col-lg-4 col-md-4 " style="margin-left:0px;margin-top:35px">
+                    <button type="button" class="green-btn" value="btnDivInvoice2" id="btnDivInvoice2" style="height:27px;width:60px;margin-right:0px;;font-family:Verdana;font-size:13px">
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

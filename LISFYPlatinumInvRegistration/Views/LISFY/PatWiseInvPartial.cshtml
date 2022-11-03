@@ -1,0 +1,60 @@
+﻿@model LISFYPlatinumInvRegistration.Models.branchdetails
+<div class="modal-dialog modal-lg textEditor " style="">
+
+    <div class="modal-content box inner-outline" style="width:700px;margin-left:200px;margin-top:80px;border-color: #808080;">
+        <div class="modal-body modal-popup " style="height:200px;width:700px;">
+
+            <button type="button" class="close" id="patInvClose" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+
+
+            <div class="row justify-content-center buttons-header " style="border:1px solid #808080;width:656px;margin-left:5px;height:60px">
+
+
+                <div class="col-lg-4 col-md-4 " style="margin-left:80px;margin-top:9px">
+                    <label style="margin-top:8px;">From</label>
+                    <input name="" id="patInvFrm" type="datetime" style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control" value="@ViewBag.FROMDATE" readonly>
+
+                    <input type="datetime" style="display:none;margin-top:10px" id="patInvFrmClndr" alt="tests" />
+
+                </div>
+                <div class="col-lg-4 col-md-4" style="margin-left:20px;margin-right:90px;margin-top:9px">
+                    <label style="margin-top:8px;">To</label>
+                    <input name="" id="patInvTo" type="datetime" style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control" value="@ViewBag.TODATE" readonly>
+
+                    <input type="datetime" style="display:none;margin-top:10px" id="patInvToClndr" alt="test" />
+
+                </div>
+
+
+            </div>
+            <div class="row justify-content-center buttons-header " style="width:656px;margin-left:5px;height:60px">
+
+
+                <div class="col-lg-10 col-md-4 col-sm-4">
+                    <div class="row" style="margin-top:20px">
+                        <div class="col-1" style="margin-left:95px"><label>Branch</label></div>
+                        <div class="col-8" style="margin-right:0px">
+                            @*<input name="passport" id="passport" type="text" class="form-control" style="width:350px;height:25px">*@
+                            <span>
+                                @Html.DropDownListFor(model => model.BrMst_Key, new SelectList(ViewBag.brlist, "BrMst_Key", "BrMst_Name"), "<-- ALL -->",@*new { style = "width: 250px;" }) ,*@ new { @id = "patInvBrid", @class = "form-control", placeholder = "FinancialYear", style = "width: 315px;height:28px" })
+
+                                @Html.ValidationMessageFor(model => model.BrMst_Key, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-3" style="margin-top:20px;font-family:Tahoma,Arial">
+                    <button type="button" class="green-btn" value="Refresh" id="btnPatInvoice" style="height:27px;width:60px;margin-right:10px;font-family:Verdana;font-size:13px">
+                        @*<label style="font-family:Verdana;font-size:13px;font-weight:bold;align-content:center">*@Print@*</label>*@
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

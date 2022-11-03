@@ -1,0 +1,345 @@
+﻿@{
+    Layout = "~/Views/Shared/_PaymentLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light bg-blue">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <h4 class="page-heading">Lab Registeration</h4>
+            </ul>
+
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <a href="" class="brand-link">
+                <span class="brand-text font-weight-light client-logo"><img src="dist/img/logo.png" alt="logo"></span>
+            </a>
+
+            <div class="sidebar">
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <li class="nav-item dropright">
+                            <a href="#" class="nav-link" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="" class="nav-link">Sample Link</a>
+                                <a href="" class="nav-link">Sample Link</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>Inv. Registration</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-qrcode"></i>
+                                <p>Barcode/Labeling</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-microscope"></i>
+                                <p>Pending Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-poll"></i>
+                                <p>Result Releasing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-money-bill-alt"></i>
+                                <p>Payments</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>Cash Closing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-calculator"></i>
+                                <p>Calculator</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-check"></i>
+                                <p>Appointment</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-comment-dots"></i>
+                                <p>Chat/Alerts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-house-user"></i>
+                                <p>Home Collection</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-envelope-open"></i>
+                                <p>Email List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-bell"></i>
+                                <p>Alarm</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-newspaper"></i>
+                                <p>News & Events</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-user-circle"></i>
+                                <p>About Us</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>Exit</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </aside>
+        <div class="content-wrapper" style="margin-bottom: 42px;">
+            <script>
+                $(document).ready(function () {
+                    $("#exampleModal").modal('show');
+                });
+
+                $(document).ready(function () {
+                    $('#mycheckbox').change(function () {
+                        $('#mycheckboxdiv').toggle();
+                    });
+                });
+
+                $(function () {
+                    $('#row_dim').hide();
+                    $('#cash-icon').hide();
+                    $('#type').change(function () {
+                        if ($('#type').val() == '1') {
+                            $('#row_dim').show();
+                            $('#cash-icon').show();
+                        } else {
+                            $('#row_dim').hide();
+                            $('#cash-icon').hide();
+                        }
+                    });
+                });
+
+                $(function () {
+                    $('#row_dim2').hide();
+                    $('#upi-icon').hide();
+                    $('#type').change(function () {
+                        if ($('#type').val() == '2') {
+                            $('#row_dim2').show();
+                            $('#upi-icon').show();
+                        } else {
+                            $('#row_dim2').hide();
+                            $('#upi-icon').hide();
+                        }
+                    });
+                });
+            </script>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-popup payment-modal" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Payment Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-bg-div create-user-div">
+
+
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="field-item">
+                                            <label for="">Total</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="discount-checkbox">
+                                            <input type="checkbox" name="mycheckbox" id="mycheckbox" value="0" />
+                                            <label for="mycheckbox">Discount</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="mycheckboxdiv" style="display:none">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="field-item">
+                                            <label for="">Discount</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="discount-reason">
+                                            <input type="text" placeholder="Discount Reason">
+                                            <button class="searchbtn"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="field-item">
+                                            <label for="">S.Charge</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="field-item payment-mode">
+                                            <label for="">Paymode</label>
+                                            <select id="type">
+                                                <option value="" disabled selected></option>
+                                                <option value="1">Cash</option>
+                                                <option value="2">Card/UPI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <h5 class="netamount">
+                                            <span>
+                                                <img src="dist/img/cash.png" alt="" id="cash-icon">
+                                                <img src="dist/img/upi.png" alt="" id="upi-icon">
+                                            </span>
+                                            Net Amount <font>
+                                                <i class="fas fa-rupee-sign"></i> 1200/-
+                                            </font>
+                                        </h5>
+                                    </div>
+                                </div>
+
+
+                                <div class="cashbank-div" id="row_dim">
+                                    <h6>Cash</h6>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="field-item">
+                                                <label for="">Paid Amount</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="field-item payment-paddingleft">
+                                                <label for="">Balance</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cashbank-div" id="row_dim2">
+                                    <h6>Card/UPI</h6>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="field-item">
+                                                <label for="">Bank A/C</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="field-item payment-paddingleft">
+                                                <label for="">Card No</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="bleu-btn"><i class="fas fa-times"></i> Exit</button>
+                            <button class="submit-btn"><i class="fas fa-save"></i> Save Bill</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

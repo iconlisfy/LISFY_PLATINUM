@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CasClosing_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ccl_Key" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ccl_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ccl_Time" type="xs:string" minOccurs="0" />
+              <xs:element name="Ccl_Coll1" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Coll2" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_PayMnt" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_OffAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen1000" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen500" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen100" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen50" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen20" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen10" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen5" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDenCoins" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDenSum" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Note" type="xs:string" minOccurs="0" />
+              <xs:element name="Ccl_ToOffice" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Balance" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Short" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Excess" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Tmpstmp" type="xs:string" minOccurs="0" />
+              <xs:element name="Ccl_UsrId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ccl_YrId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ccl_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ccl_Updtd" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ccl_CshDen2000" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Ccl_Receipt" type="xs:double" minOccurs="0" />
+              <xs:element name="Ccl_CshDen200" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CashCloseUserWise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsrCash_Key" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UsrCash_CclKey" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UsrCash_TransNo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UsrCash_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="UsrCash_Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="UsrCash_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="UsrCash_User" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UsrCash_UsrId" type="xs:int" minOccurs="0" />
+              <xs:element name="UsrCash_YrId" type="xs:int" minOccurs="0" />
+              <xs:element name="UsrCash_CpyId" type="xs:int" minOccurs="0" />
+              <xs:element name="UsrCash_InvUserId" type="xs:int" minOccurs="0" />
+              <xs:element name="UserName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Addr1" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Addr2" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Ph" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Email" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Tin" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Cst" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Declton" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_ExpPath" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_AskPrntBill" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_DfltBrId" type="xs:double" minOccurs="0" />
+              <xs:element name="CmpMst_BcodePath" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_DtPrntPath" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_IsHo" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwInsrnce" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwArea" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_SrvChrg" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwStmntStf" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwBillEditStf" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwBillCnclStf" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwBarCode" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_AlwPrceEdit" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_SmpleColltn" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_Dsn" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_ChngeAprnce" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_NoAge" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_PrntType" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_PrntRptTime" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_IsIF" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_NCopy" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CmpMst_LpdExceedVal" type="xs:double" minOccurs="0" />
+              <xs:element name="CmpMst_MsgType" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CmpMst_BarcodeType" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CmpMst_LicCnt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CmpMst_LicDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CmpMst_InHouseId" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_HomecollView" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_Headerimage" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CmpMst_Footerimage" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CmpMst_Dbtype" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_WAppType" type="xs:int" minOccurs="0" />
+              <xs:element name="CmpMst_WAppToken" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_WAppAPIUrl" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_AutoUpdateBr" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,65 @@
+﻿<div class="modal-dialog modal-lg textEditor " style="">
+
+    <div class="modal-content box inner-outline" style="width:500px;margin-left:300px;margin-top:80px;border-color: #808080;">
+        @*<div class="modal-header" style="background-color:#85b9e0;margin-top:8px;margin-left:30px;">
+
+                <h6 class="modal-title" style="margin-top:8px;margin-left:30px;background-color:#85b9e0;color:black">Daily Collection Statement</h6>
+            </div>*@
+        <div class="modal-body modal-popup " style="height:180px;width:500px;">
+
+            <button type="button" class="close" id="DivPerfmnceFrmClose" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="row justify-content-center buttons-header" style="border:1px solid #808080;width:456px;margin-left:5px;height:60px;background-color:#357EC7">
+
+
+                <div class="col-lg-10 col-md-4 col-sm-4">
+                    <div class="row" style="margin-top:20px">
+                        @*<div class="col-1" style="margin-left:95px"><label>Branch</label></div>*@
+                        <div class="col-8" style="margin-right:0px">
+                            @*<input name="passport" id="passport" type="text" class="form-control" style="width:350px;height:25px">*@
+                            <h5 style="color:white;width:350px">DivisionWise Perfomance</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3" style="margin-top:20px;font-family:Tahoma,Arial">
+                    <button type="button" class="green-btn" value="Refresh" id="btnDivPerfmnce" style="height:27px;width:60px;margin-right:10px;font-family:Verdana;font-size:13px">
+                        @*<label style="font-family:Verdana;font-size:13px;font-weight:bold;align-content:center">*@Print@*</label>*@
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="row justify-content-center buttons-header " style="width:456px;margin-left:5px;height:60px">
+
+
+                <div class="col-lg-10 col-md-4 col-sm-4">
+                    <div class="row" style="margin-top:20px">
+                        <div class="col-1" style="margin-top:3px"><label>From</label></div>
+                        <div class="col-lg-5" style="margin-right:0px">
+                            <input name="DivPerfmnceFrm" id="DivPerfmnceFrm" type="text" autocomplete="off" class="form-control" style="margin-top:5px;width:120px;height:25px" value="@ViewBag.FROMDATE" readonly>
+                            <input type="datetime" style="display:none;margin-top:10px" id="DivPerfmnceFrmClndr" alt="tests" />
+
+
+                        </div>
+                        <div class="col-1" style="margin-top:3px"><label>To</label></div>
+                        <div class="col-lg-5" style="margin-right:0px">
+                            <input name="DivPerfmnceTo" id="DivPerfmnceTo" type="text" autocomplete="off" class="form-control" style="margin-top:5px;width:120px;height:25px" value="@ViewBag.TODATE" readonly>
+                            <input type="datetime" style="display:none;margin-top:10px" id="DivPerfmnceToClndr" alt="tests" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-3" style="margin-top:20px;font-family:Tahoma,Arial">
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

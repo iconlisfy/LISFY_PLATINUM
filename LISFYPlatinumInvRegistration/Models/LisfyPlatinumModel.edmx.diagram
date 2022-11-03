@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="87f6d9eced3d43d78585bd66a96f8607" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="CARE021112Model.Master" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.SetDoctor_Staff" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Set_GroupTest" Width="1.5" PointX="6.75" PointY="6.375" />
+        <EntityTypeShape EntityType="CARE021112Model.Voucher" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Customize2_RsltDescMst" Width="1.5" PointX="6.75" PointY="8.625" />
+        <EntityTypeShape EntityType="CARE021112Model.PendingCollection" Width="1.5" PointX="12.875" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Labcor_Login" Width="1.5" PointX="6.75" PointY="3" />
+        <EntityTypeShape EntityType="CARE021112Model.Company_Mst" Width="1.5" PointX="12.875" PointY="5.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Special_SchemeRates" Width="1.5" PointX="4.625" PointY="2.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Special_Rates" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.User" Width="1.5" PointX="8.875" PointY="7.375" />
+        <EntityTypeShape EntityType="CARE021112Model.Patient_Mst" Width="1.5" PointX="14.875" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.TestRef_Mst" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.NormalRanx" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Test_Mst" Width="1.5" PointX="4.625" PointY="11.875" />
+        <EntityTypeShape EntityType="CARE021112Model.Invoice_Mst" Width="1.5" PointX="10.875" PointY="0.75" />
+        <EntityTypeShape EntityType="CARE021112Model.CashClosing_Mst" Width="1.5" PointX="12.75" PointY="0.625" />
+        <EntityTypeShape EntityType="CARE021112Model.CashClosing_UserWise" Width="1.5" PointX="2.75" PointY="7.5" />
+        <EntityTypeShape EntityType="CARE021112Model.Report_Dispatching" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="CARE021112Model.BillWiseCollection" Width="1.5" PointX="2.75" PointY="3.375" />
+        <EntityTypeShape EntityType="CARE021112Model.SETTING" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Invoice_Det" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="CARE021112Model.AccountHeads_Mst" Width="1.5" PointX="7.375" PointY="16.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Set_UserRights" Width="1.5" PointX="13.375" PointY="16.75" />
+        <EntityTypeShape EntityType="CARE021112Model.Set_UserRightSel" Width="1.5" PointX="15.375" PointY="16.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

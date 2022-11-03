@@ -1,0 +1,124 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CollStmt_Branch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BRName" type="xs:string" minOccurs="0" />
+              <xs:element name="BRID" type="xs:double" minOccurs="0" />
+              <xs:element name="cashBal" type="xs:double" minOccurs="0" />
+              <xs:element name="netamount" type="xs:double" minOccurs="0" />
+              <xs:element name="Grossamt" type="xs:double" minOccurs="0" />
+              <xs:element name="PendBill" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColl" type="xs:double" minOccurs="0" />
+              <xs:element name="Discount" type="xs:double" minOccurs="0" />
+              <xs:element name="Payment" type="xs:double" minOccurs="0" />
+              <xs:element name="Advnc" type="xs:double" minOccurs="0" />
+              <xs:element name="OtIncome" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendSum">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rsNetAMt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_BrID" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OPInvRcvAmt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="BrName" type="xs:string" minOccurs="0" />
+              <xs:element name="RecvAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="OPPendAmt" type="xs:int" minOccurs="0" />
+              <xs:element name="OPVochrPaymnt" type="xs:double" minOccurs="0" />
+              <xs:element name="OPVochrRecvAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OPPendAmt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="BrName" type="xs:string" minOccurs="0" />
+              <xs:element name="RecvAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="billcount">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Column1" type="xs:int" minOccurs="0" />
+              <xs:element name="Inv_BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CpyId" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CASHCREDIT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Inv_BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="Cash" type="xs:double" minOccurs="0" />
+              <xs:element name="Credit" type="xs:double" minOccurs="0" />
+              <xs:element name="cardd" type="xs:double" minOccurs="0" />
+              <xs:element name="bhim" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Voucher">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vchr_BrId" type="xs:int" minOccurs="0" />
+              <xs:element name="vouchercash" type="xs:double" minOccurs="0" />
+              <xs:element name="vouchercheque" type="xs:double" minOccurs="0" />
+              <xs:element name="vouchercard" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prevpend">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PndC_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PendSumAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="curbalamt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="inv_paymode" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Inv_BrID" type="xs:double" minOccurs="0" />
+              <xs:element name="Column1" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="_x005B_dbo_x005D_._x005B_Company_Mst_x005D_">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInterval" type="xs:string" minOccurs="0" />
+              <xs:element name="TestName" type="xs:string" minOccurs="0" />
+              <xs:element name="Branch" type="xs:string" minOccurs="0" />
+              <xs:element name="Reporthead" type="xs:string" minOccurs="0" />
+              <xs:element name="OpeningBal" type="xs:double" minOccurs="0" />
+              <xs:element name="Payments" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

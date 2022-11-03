@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Listview">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="amt0" type="xs:double" minOccurs="0" />
+              <xs:element name="amt1" type="xs:int" minOccurs="0" />
+              <xs:element name="amt2" type="xs:int" minOccurs="0" />
+              <xs:element name="amt3" type="xs:int" minOccurs="0" />
+              <xs:element name="amt4" type="xs:int" minOccurs="0" />
+              <xs:element name="amt5" type="xs:double" minOccurs="0" />
+              <xs:element name="amt6" type="xs:int" minOccurs="0" />
+              <xs:element name="amt7" type="xs:int" minOccurs="0" />
+              <xs:element name="amt8" type="xs:double" minOccurs="0" />
+              <xs:element name="amt9" type="xs:double" minOccurs="0" />
+              <xs:element name="amt10" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Head" type="xs:string" minOccurs="0" />
+              <xs:element name="nOpeningCol" type="xs:string" minOccurs="0" />
+              <xs:element name="nOpeningColNew" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

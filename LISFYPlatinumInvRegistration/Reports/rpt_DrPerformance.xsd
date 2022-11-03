@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTitle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirmName" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd1" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd2" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd3" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNo" type="xs:string" minOccurs="0" />
+              <xs:element name="MailId" type="xs:string" minOccurs="0" />
+              <xs:element name="TinNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CstNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Header1" type="xs:string" minOccurs="0" />
+              <xs:element name="Header2" type="xs:string" minOccurs="0" />
+              <xs:element name="Header3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Inv_No" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Inv_name" type="xs:string" minOccurs="0" />
+              <xs:element name="DscRsnMst_Reason" type="xs:string" minOccurs="0" />
+              <xs:element name="PatientName" type="xs:string" minOccurs="0" />
+              <xs:element name="DrName" type="xs:string" minOccurs="0" />
+              <xs:element name="Insurance" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_PntInvId" type="xs:int" minOccurs="0" />
+              <xs:element name="Inv_PntId" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_GrosAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_InsNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_OutDr" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_DrId" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_User" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_time" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_DiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_OthAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Netamt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_RcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CurRcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CurBalAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_BalAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_PayMode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,220 @@
+﻿@{
+    @*@model LISFYPlatinumInvRegistration.Models.accountledgercs*@
+    Layout = "~/Views/Shared/_account.cshtml";
+}
+
+<div class="modal" id="HospitalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hospital</h5>
+                <button type="button" class="close srchhosp" data-dismiss="modal" aria-label="Close" id="closehospital" style="background-color:#428bca">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-bg-div">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="field-item namefield">
+                                <label for="">Name</label>
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-3"><input type="text" id="name" readonly></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                                        <input type="text" id="namesrch" class="bold-input-field fcs" onkeyup="if ( event.keyCode == 27 ) this.value=''">
+                                        <input type="text" id="namesrchid" style="display:none" class="fcs">
+                                        <button class="searchbtn" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button" id="hospitalsrch"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Address</label>
+                                <textarea class="textarea-style fcs" name="" id="Addresshosp" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Mobile</label>
+                                <input type="text" id="Mobile" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Phone</label>
+                                <input type="text" id="Phone" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Email</label>
+                                <input type="email" id="Email" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Area</label>
+                                <input type="text" id="areaname" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" id="Areaid" style="display:none">
+                                <button class="searchbtn" id="srcharea" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Contact Person</label>
+                                <input type="text" id="Contact" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Specialised</label>
+                                <input type="text" id="Specialisedname" class="fcs" readonly>
+                                <input type="text" id="Specialisednameid" style="display:none">
+                                <button class="searchbtn" id="srchspec" data-toggle="modal" data-target="#searchlookup" data-backdrop="static" data-keyboard="false" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                            @*<div class="col-lg-6 col-sm-6 col-md-6">
+                                <div class="field-item">
+                                <label for="">Specialised</label>
+
+                                <input type="text" id="Specialisedname">
+                                <input type="text" id="Specialisednameid" style="display:none">
+                                </div>*@
+                        </div>
+
+
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-9">
+                            <div class="field-item">
+                                <label for="">Hosp. Day</label>
+                                @*<input type="date" name="" id="Day">*@
+                                <input type="text" name="Day" id="Day" placeholder="dd-mm-yyyy" class="fcs" value="@ViewBag.cashcurdate">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-3">
+                            <div class="field-item pl-0">
+                                <ul class="address-dis-list">
+                                    <li>
+                                        <label for="active">
+                                            <input type="checkbox" name="a" id="active">
+                                            Active
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Note</label>
+                                <textarea class="docnote-textarea fcs" name="" id="notename" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="bleu-btn" id="hosnew"><i class="fas fa-plus"></i> New</button>
+                <button class="bleu-btn" id="hosexit"><i class="fas fa-times"></i> Exit</button>
+                <button class="submit-btn" id="savehospital"><i class="fas fa-save"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="searchhospital" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="display:none">
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content" style="height:400px;width:370px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close srchhospital" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-bg-div" style="height:400px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+
+
+                            <select style="height:30px; width: 140px;" id="hospSelectField" class="hospital1">
+                                <option value="1" id="account">Hospital</option>
+                                <option value="2" id="code">Code</option>
+                                @*
+                                    <option value="3" id="type">Type</option>*@
+                            </select>
+                            <select style="height:30px; width: 140px;" id="areaSelectField" class="hospital1">
+                                <option value="1" id="account">Area</option>
+                                <option value="2" id="code">Code</option>
+                                @*
+                                    <option value="3" id="type">Type</option>*@
+                            </select>
+                            <select style="height:30px; width: 140px;" id="specSelectField" class="hospital1">
+                                <option value="1" id="account">Specialised</option>
+                                <option value="2" id="code">Code</option>
+                                @*
+                                    <option value="3" id="type">Type</option>*@
+                            </select>
+
+                            <input type="text" id="txthosp" style="width: 180px;" />
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <div class="table-responsive test-table" style="width:300px;height:300px;" id="selecthospsroll">
+                                        <table class="table-bordered" id="tbhosname">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 300px;text-align:center" id="headerfile">Hospital</th>
+                                                    @*
+                                                        <th scope="col" style="width: 180px;">Type</th>*@
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                        </table>
+                                        <table class="table-bordered" id="tbarea">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 300px;text-align:center" id="headerfile">Area</th>
+                                                    @*
+                                                        <th scope="col" style="width: 180px;">Type</th>*@
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                        </table>
+                                        <table class="table-bordered" id="tbspec">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 300px;text-align:center" id="headerfile">Specialised</th>
+                                                   
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

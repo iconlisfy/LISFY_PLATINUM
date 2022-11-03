@@ -1,0 +1,226 @@
+System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)System.Data.Entity.Core.MappingException: 
+Models.LisfyPlatinumModel.msl(1030,10) : error 3004: Problem in mapping fragments starting at line 1030:No mapping specified for properties Invoice_Det.InvItm_Refrllab, Invoice_Det.InvItm_SampleModeId, Invoice_Det.InvItm_SampledOn, Invoice_Det.InvItm_SampledUser in Set Invoice_Det.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [CARE021112Model.Invoice_Det]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)

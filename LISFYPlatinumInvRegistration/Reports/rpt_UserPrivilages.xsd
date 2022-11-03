@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="User">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsrSel_UsrId" type="xs:int" minOccurs="0" />
+              <xs:element name="UsrSel_MainMenu" type="xs:string" minOccurs="0" />
+              <xs:element name="UsrSel_SubMenu" type="xs:string" minOccurs="0" />
+              <xs:element name="UsrSel_MenuName" type="xs:string" minOccurs="0" />
+              <xs:element name="UsrSel_Select" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Usr_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Usr_grp" type="xs:string" minOccurs="0" />
+              <xs:element name="Usr_key" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+{
+  "name": "jquery-fcs",
+  "version": "1.0.0",
+  "description": "jQuery library what move forcus by typing enter key.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery",
+    "forcus"
+  ],
+  "author": "Katsuhiko Miki",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

@@ -1,0 +1,218 @@
+﻿
+@{
+    @*@model LISFYPlatinumInvRegistration.Models.accountledgercs*@
+    Layout = "~/Views/Shared/_account.cshtml";
+}
+<div class="modal" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="z-index:1600;display:none">
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeemp">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-bg-div">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="field-item namefield">
+                                <label for="">Name</label>
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-3"><input type="text" id="empid" readonly></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                                        <input type="text" id="employeename" class="bold-input-field fcs" onkeyup="if ( event.keyCode == 27 ) this.value=''">
+                                        <input type="text" style="display:none" id="employeenameid">
+                                        <button class="searchbtn" nam id="employeesrch" data-toggle="modal" data-target="#searchemployeestaff" data-backdrop="static" data-keyboard="false"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Address</label>
+                                <textarea class="textarea-style fcs" name="" id="empaddress" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Mobile</label>
+                                <input type="number" id="empmobile" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Phone</label>
+                                <input type="number" id="empphone" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Email</label>
+                                <input type="email" id="empemail" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="field-item">
+                                <label for="">Area</label>
+                                <input type="text" id="emparea" onkeyup="if ( event.keyCode == 27 ) this.value=''" class="fcs" readonly>
+                                <input type="text" style="display:none" id="empareaid">
+                                <button class="searchbtn" id="empareasrch" data-toggle="modal" data-target="#searchemployeestaff" data-backdrop="static" data-keyboard="false"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Contact Person</label>
+                                <input type="text" id="empcntperson" class="fcs">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-5 col-sm-5">
+                            <div class="field-item">
+                                <label for="">Date of Birth</label>
+
+                                <input type="text" name="empdob" id="empdob" placeholder="dd-mm-yyyy" class="fcs">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7">
+                            <div class="field-item">
+                                <label for="">Gender</label>
+                                <ul class="address-dis-list">
+                                    <li>
+                                        <label for="male">
+                                            <input type="radio" name="a" id="empmale">
+                                            Male
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="female">
+                                            <input type="radio" name="a" id="empfemale">
+                                            Female
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-9">
+                            <div class="field-item">
+                                <label for="">Wed. Day</label>
+                                @*<input type="date" name="" id="empwday">*@
+                                <input type="text" name="empwday" id="empwday" placeholder="dd-mm-yyyy" class="fcs">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-3">
+                            <div class="field-item pl-0">
+                                <ul class="address-dis-list">
+                                    <li>
+                                        <label for="active">
+                                            <input type="checkbox" name="a" id="empactive" checked>
+                                            Active
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item">
+                                <label for="">Note</label>
+                                <textarea class="docnote-textarea fcs" name="" id="empnote" cols="30"
+                                          rows="10"></textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="bleu-btn" id="empnew"><i class="fas fa-plus"></i> New</button>
+                <button class="bleu-btn" id="employeexit" data-dismiss="modal"><i class="fas fa-times"></i> Exit</button>
+                @*<button class="bleu-btn" id="employeexituser"><i class="fas fa-times"></i> Exit</button>*@
+                <button class="submit-btn" id="empsave"><i class="fas fa-save"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="modal fade" id="dctrSrchLkupEntry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" style="display:none">
+*@
+<div class="modal" id="searchemployeestaff" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="z-index: 3000;display:none">
+    <div class="modal-dialog modal-popup" role="document">
+        <div class="modal-content" style="height:400px;width:370px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close srchemp" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-bg-div" style="height:400px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+
+
+                            <select style="height:30px; width: 140px;" id="empSelectField" class="hospital1">
+                                <option value="1" id="account">Employee</option>
+                                <option value="2" id="code">Code</option>
+                                @*
+                                    <option value="3" id="type">Type</option>*@
+                            </select>
+                            <select style="height:30px; width: 140px;" id="empareaSelectField" class="hospital1">
+                                <option value="1" id="account">Area</option>
+                                <option value="2" id="code">Code</option>
+                                @*
+                                    <option value="3" id="type">Type</option>*@
+                            </select>
+
+                            <input type="text" id="txtemp" style="width: 180px;" />
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <div class="table-responsive test-table" style="width:300px;height:300px;" id="selectempscroll">
+                                        <table class="table-bordered" id="tbempname">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 300px;text-align:center" id="headerfile">Employee</th>
+                                                    @*
+                                                        <th scope="col" style="width: 180px;">Type</th>*@
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                        </table>
+                                        <table class="table-bordered" id="tbareaemp">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 300px;text-align:center" id="headerfile">Area</th>
+                                                    @*
+                                                        <th scope="col" style="width: 180px;">Type</th>*@
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

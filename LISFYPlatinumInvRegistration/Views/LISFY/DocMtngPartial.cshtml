@@ -1,0 +1,74 @@
+﻿<div class="modal-dialog modal-lg textEditor " style="">
+
+    <div class="modal-content box inner-outline" style="width:450px;margin-left:300px;margin-top:80px;border-color: #808080;">
+        @*<div class="modal-header" style="background-color:#85b9e0;margin-top:8px;margin-left:30px;">
+
+                <h6 class="modal-title" style="margin-top:8px;margin-left:30px;background-color:#85b9e0;color:black">Daily Collection Statement</h6>
+            </div>*@
+        <div class="modal-body modal-popup " style="height:205px;width:450px;">
+
+            <button type="button" class="close" id="dctrmtngClose" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="row justify-content-center buttons-header" style="border:1px solid #808080;width:406px;margin-left:5px;height:60px;background-color:#357EC7">
+
+
+                <div class="col-lg-10 col-md-4 col-sm-4">
+                    <div class="row" style="margin-top:20px">
+                        @*<div class="col-1" style="margin-left:95px"><label>Branch</label></div>*@
+                        <div class="col-8" style="margin-right:0px">
+                            @*<input name="passport" id="passport" type="text" class="form-control" style="width:350px;height:25px">*@
+                            <h5 style="color:white;width:350px">Doctor Meeting</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3" style="margin-top:20px;font-family:Tahoma,Arial">
+                    <button type="button" class="green-btn" value="Refresh" id="btndctrmtng" style="height:27px;width:60px;margin-right:10px;font-family:Verdana;font-size:13px">
+                        @*<label style="font-family:Verdana;font-size:13px;font-weight:bold;align-content:center">*@Print@*</label>*@
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="row buttons-header " style="width:456px;margin-left:10px;height:40px">
+
+                <div class="col-lg-5 col-md-4 " style="margin-right:20px;margin-top:2px">
+                    <label style="margin-top:8px;">From</label>
+                    <input name="dctrmtngFrm" id="dctrmtngFrm" @*type="datetime"*@ style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control" value="@ViewBag.FROMDATE" readonly>
+
+                    <input type="" style="display:none;margin-top:10px" id="dctrmtngFrmClndr" alt="tests" />
+
+                </div>
+                <div class="col-lg-5 col-md-4" style="margin-left:0px;margin-right:0px;margin-top:2px">
+                    <label style="margin-top:8px;">To</label>
+                    <input name="dctrmtngTo" id="dctrmtngTo" @*type="datetime"*@ style="cursor :default;height:25px;width:100px;margin-top:8px;font-family:Tahoma,Arial;font-size:13px" class="form-control" value="@ViewBag.TODATE" readonly>
+
+                    <input type="" style="display:none;margin-top:10px" id="dctrmtngToClndr" alt="test" />
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row buttons-header " style="border:0px solid #808080;width:456px;margin-left:5px;height:25px">
+                <div class="col-lg-1" style="margin-top:10px;font-size:12px;margin-right:10px;margin-left:5px">Doctor</div>
+                <div class="col-5" style="margin-right:57px">
+                    <input name="dctrName" id="dctrName" style="cursor :default;height:25px;width:195px;margin-top:5px;font-family:Tahoma,Arial;font-size:13px" class="form-control" />
+                </div>
+                <input name="dctrKey" id="dctrKey" style="cursor:default;height:25px;width:195px;margin-top:5px;font-family:Tahoma,Arial;font-size:13px;display:none" class="form-control" />
+
+                <div class="col-5" style="margin-top:2px">
+                    <input type="radio" id="dctrNameCheck" style="margin-top:8px;" name="doctorCheck" value="DATE" checked />
+
+                    <label for="usr" style="margin-top:1px;font-family:Tahoma,Arial;margin-right:0px">&nbsp; Doctor&nbsp;&nbsp;&nbsp;</label>
+
+                    <input type="radio" id="dctrCodeCheck" style="margin-top:8px;" name="doctorCheck" value="BILL" />
+                    <label for="code" style="margin-top:1px;font-family:Tahoma,Arial;">&nbsp; Code</label>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

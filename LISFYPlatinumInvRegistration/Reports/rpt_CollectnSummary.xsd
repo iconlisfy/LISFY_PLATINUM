@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMaster">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PendSum" type="xs:double" minOccurs="0" />
+              <xs:element name="PendSumNew" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColCur" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColPre" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColPreCash" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColPreCard" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColCurCash" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColCurCard" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColcurChq" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColPreChq" type="xs:double" minOccurs="0" />
+              <xs:element name="nOpeningCol" type="xs:string" minOccurs="0" />
+              <xs:element name="nOpeningColNew" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTitle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirmName" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd1" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd2" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdd3" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNo" type="xs:string" minOccurs="0" />
+              <xs:element name="MailId" type="xs:string" minOccurs="0" />
+              <xs:element name="TinNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CstNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Header1" type="xs:string" minOccurs="0" />
+              <xs:element name="Header2" type="xs:string" minOccurs="0" />
+              <xs:element name="Header3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Gross" type="xs:double" minOccurs="0" />
+              <xs:element name="DiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Netamt" type="xs:double" minOccurs="0" />
+              <xs:element name="Advance" type="xs:double" minOccurs="0" />
+              <xs:element name="CashBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="CredBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="CCardBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="PendCol" type="xs:double" minOccurs="0" />
+              <xs:element name="Payments" type="xs:double" minOccurs="0" />
+              <xs:element name="Recipts" type="xs:double" minOccurs="0" />
+              <xs:element name="CurBal" type="xs:double" minOccurs="0" />
+              <xs:element name="NetBal" type="xs:double" minOccurs="0" />
+              <xs:element name="CashPend" type="xs:double" minOccurs="0" />
+              <xs:element name="CreditPend" type="xs:double" minOccurs="0" />
+              <xs:element name="BhimAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Cardamt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendingColl">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CancelledInv">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendingReg">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CorpSummary">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

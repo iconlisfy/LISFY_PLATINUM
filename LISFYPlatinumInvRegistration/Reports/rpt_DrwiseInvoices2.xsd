@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Inv_No" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Inv_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_DiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_Netamt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Inv_CurRcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_CurBalAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_UsrId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DrName" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_OutDr" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_DrId" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_PayMode" type="xs:string" minOccurs="0" />
+              <xs:element name="CORPORATE" type="xs:string" minOccurs="0" />
+              <xs:element name="BrMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Inv_BrId" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtInvTestDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvItm_key" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_Invno" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_TstId" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_rate" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_Orgrate" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_Issued" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_SmplId" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_SmplStats" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_UsrId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_YrId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_Updtd" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_CutDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvItm_CutUser" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_CutPaper" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_DiscPer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvItm_Type" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_DepId" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_CompletedUserInfo" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_SampledUser" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_SampledOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvItm_SampleModeId" type="xs:string" minOccurs="0" />
+              <xs:element name="InvItm_IsPrinted" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_TstOrgRate" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_DiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_RevDiscAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="InvItm_ScndLvl" type="xs:int" minOccurs="0" />
+              <xs:element name="InvItm_Refrllab" type="xs:int" minOccurs="0" />
+              <xs:element name="TstMst_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInterval" type="xs:string" minOccurs="0" />
+              <xs:element name="TestName" type="xs:string" minOccurs="0" />
+              <xs:element name="Branch" type="xs:string" minOccurs="0" />
+              <xs:element name="Reporthead" type="xs:string" minOccurs="0" />
+              <xs:element name="CheqIssue" type="xs:float" minOccurs="0" />
+              <xs:element name="CheqRec" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="monthycol">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BRANCHNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="branchid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Mdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gross" type="xs:double" minOccurs="0" />
+              <xs:element name="Disc" type="xs:double" minOccurs="0" />
+              <xs:element name="Netamt" type="xs:double" minOccurs="0" />
+              <xs:element name="Advance" type="xs:double" minOccurs="0" />
+              <xs:element name="CashBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="CredBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="CCardBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="PendCol" type="xs:double" minOccurs="0" />
+              <xs:element name="Payments" type="xs:double" minOccurs="0" />
+              <xs:element name="NetBal" type="xs:double" minOccurs="0" />
+              <xs:element name="CashPend" type="xs:double" minOccurs="0" />
+              <xs:element name="CreditPend" type="xs:double" minOccurs="0" />
+              <xs:element name="Receipt" type="xs:double" minOccurs="0" />
+              <xs:element name="CurBAl" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BRANCHESS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BRName" type="xs:string" minOccurs="0" />
+              <xs:element name="BRID" type="xs:double" minOccurs="0" />
+              <xs:element name="cashBal" type="xs:double" minOccurs="0" />
+              <xs:element name="netamount" type="xs:double" minOccurs="0" />
+              <xs:element name="Grossamt" type="xs:double" minOccurs="0" />
+              <xs:element name="PendBill" type="xs:double" minOccurs="0" />
+              <xs:element name="PendColl" type="xs:double" minOccurs="0" />
+              <xs:element name="Discount" type="xs:double" minOccurs="0" />
+              <xs:element name="Payment" type="xs:double" minOccurs="0" />
+              <xs:element name="Advnc" type="xs:double" minOccurs="0" />
+              <xs:element name="OtIncome" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="monthyear">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Yr_StartDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="monthpend">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PndC_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PrevPendSum" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="monthbal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OpBl_OpBalance" type="xs:double" minOccurs="0" />
+              <xs:element name="OpBl_OpStatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AMT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="branch" type="xs:double" minOccurs="0" />
+              <xs:element name="Inv_RcvdAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="PndC_Amount" type="xs:double" minOccurs="0" />
+              <xs:element name="vchr_Payment" type="xs:double" minOccurs="0" />
+              <xs:element name="vchr_Receipt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PEND">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PndC_CpyId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PendSumAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Company_Mst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CmpMst_Key" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="CmpMst_place" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInterval" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

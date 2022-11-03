@@ -1,0 +1,559 @@
+﻿<div class="sidebar" id="main">
+
+    <nav class="mt-2 ">
+
+        <ul class="nav nav-pills nav-sidebar flex-column" id="MainMenu" data-widget="treeview" role="menu" data-accordion="false">
+            @*<li class="nav-item dropright ">
+                    <a href="HomePage" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>*@
+            <li class="nav-item ">
+                <a href="HomePage" id="HomePage" class="nav-link">
+                    <i class="nav-icon far fa-plus-square"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li class="nav-item dropright" style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                    <p id="cng">Front Office <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" id="submenu" class="nav-link">Patient Registration</a>
+                    <a href="" id="submenu" class="nav-link">Edit Invoice</a>
+                    <a href="" id="submenu" class="nav-link">Pending Collection</a>
+                    <a href="" id="submenu" class="nav-link">Cash Closing</a>
+                    <a href="" id="submenu" class="nav-link">Report Dispatching</a>
+                    <a href="" id="submenu" class="nav-link">OP Registration</a>
+                    <a href="" id="submenu" class="nav-link">Cancel Invoice</a>
+                    <a href="" id="submenu" class="nav-link">Billwise Collection</a>
+                    <a href="" id="submenu" class="nav-link">Billwise Collection Area</a>
+                    <a href="" id="submenu" class="nav-link">Home Collection Booking</a>
+                    <a href="" id="submenu" class="nav-link">Home Collection View</a>
+                    <a href="" id="submenu" class="nav-link">Home Collection Pending Coll</a>
+                    <a href="" id="submenu" class="nav-link">Scan Booking</a>
+                    <a href="" id="submenu" class="nav-link">Envelop</a>
+                    <a href="" id="submenu" class="nav-link">PatientView</a>
+                    <a href="" id="submenu" class="nav-link">Result Delivery Status</a>
+                </div>
+            </li>
+
+            @*********************@
+            <li class="nav-item dropright " style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <p>Sample Flow <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu" style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">Barcode Generation</a>
+                    <a href="" class="nav-link">Biochemistry Sample Receiving</a>
+                    <a href="" class="nav-link">Haemetology Sample Receiving</a>
+                    <a href="" class="nav-link">Microbiology Sample Receiving</a>
+                    <a href="" class="nav-link">Clinical Pathology Sample Receiving</a>
+                    <a href="" class="nav-link">Sample Tracking</a>
+                    <a href="" class="nav-link">Sample Rejection</a>
+                    <a href="" class="nav-link">Sample Receiving</a>
+                </div>
+            </li>
+            <li class="nav-item dropright " style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <p>Technical <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">Result Issuing</a>
+                    <a href="" class="nav-link">Referal Lab Management</a>
+                    <a href="" class="nav-link">TAT out Explanation</a>
+                    <a href="" class="nav-link">Result Register</a>
+                    <a href="" class="nav-link">Test Wise Register</a>
+                    <a href="" class="nav-link">ECHO Report</a>
+                    <a href="" class="nav-link">Work Register(Test Wise)</a>
+                    <a href="" class="nav-link">Work Register(Bill Wise)</a>
+                    <a href="" class="nav-link">Work Order</a>
+                    <a href="" class="nav-link">Attatch Document</a>
+                    <a href="" class="nav-link">Us Scan/X-Ray/Ecg/Mammography Management</a>
+                    <a href="" class="nav-link">Remove authorization</a>
+                    <a href="" class="nav-link">First Level authorization</a>
+                    <a href="" class="nav-link">Second Authorization Queue</a>
+                    <a href="" class="nav-link">Email Queue</a>
+                    <a href="" class="nav-link">Email Radiology Report</a>
+                    <a href="" class="nav-link">Pending Test</a>
+                    <a href="" class="nav-link">covid-19</a>
+                    <a href="" class="nav-link">wrktestreg</a>
+                    <a href="" class="nav-link">edit pend</a>
+                </div>
+            </li>
+            <li class="nav-item dropright " style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <p>Accounts <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">Account Ledger</a>
+                    <a href="" class="nav-link">Cash Payments</a>
+                    <a href="" class="nav-link">Cash Receipts</a>
+                    <a href="" class="nav-link">Day Book</a>
+                    <a href="" class="nav-link">Journal</a>
+                    <a href="" class="nav-link">Cheque Issue</a>
+                    <a href="" class="nav-link">Cheque Receipt</a>
+                    <a href="" class="nav-link">Cheque Transaction</a>
+                    <a href="" class="nav-link">TestReqQue</a>
+                    <a href="" class="nav-link">Referallabbilwise</a>
+                </div>
+            </li>
+            @**********************************@
+            <li class="nav-item dropright " style="position:relative">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <i class="nav-icon fas fa-file"></i>
+                    <p>Reports <i class="right fas fa-chevron-right"></i></p>
+                </a>
+
+                <div class="dropdown-menu " id="SubMenu" style="will-change: transform;width:300px; position: relative; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#dailyclctnstmnts" onclick="toggle_visibility('menu1');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#dailyclctnstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Daily Periodic Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu1" style="height: 380px; overflow-y: scroll;will-change: transform;width:300px; position: absolute;display:none; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link btndlyClnStmnt">Daily Collection Statements</a>
+                                <a href="" class="nav-link btndlyClnSmry">Daily Collection Summary</a>
+                                <a href="" class="nav-link btndlyClnSmry2">Daily Collection Summary2</a>
+                                <a href="" class="nav-link colstmtbrnch">Collection Statement Branch Wise</a>
+                                <a href="" class="nav-link colsmrybrnch">Collection Summary Branch Wise</a>
+                                <a href="" class="nav-link dailyCashInvoice">Daily Cash Invoice</a>
+                                <a href="" class="nav-link pidWiseBillClctn">Patient ID Wise Bill Collection</a>
+                                <a href="" class="nav-link mnthlyClctnSmry">Monthly Collection Summary</a>
+                                <a href="" class="nav-link DivisionSummary">Monthly Collection Division Summary</a>
+                                <a href="" class="nav-link MonthlyCollBrnchWise">Monthly Collection Summary BranchWise</a>
+                                <a href="" class="nav-link usrWiseClctn">User Wise Collection</a>
+                                <a href="" class="nav-link usrWiseClctnSmry">User Wise Collection Summary</a>
+                                <a href="" class="nav-link PatWiseInvoice">Patient Wise Invoices</a>
+                                <a href="" class="nav-link DivWiseInvoice">Division Wise Invoices</a>
+                                <a href="" class="nav-link DivWiseInv2">Division Wise Invoices2</a>
+                                <a href="" class="nav-link divWiseSmry">Division Wise Summary</a>
+                                <a href="" class="nav-link usrTackRpt">User Track Report</a>
+                                <a href="" class="nav-link brnchWiseInv">Branch Wise Invoices</a>
+                                <a href="" class="nav-link discWiseInv">Discount Wise Invoices</a>
+                                <a href="" class="nav-link CncldInvoices">Cancelled Invoices</a>
+                                <a href="" class="nav-link doctrMeeting">Doctors Meeting</a>
+                                <a href="" class="nav-link DptWiseInv">Department Wise Invoices</a>
+                                <a href="" class="nav-link DivWisePerfomance">Division Wise Perfomance</a>
+                                <a href="" class="nav-link refundStmnts">Refund Statements</a>
+                                <a href="" class="nav-link DctrVisit">Doctors List(Visit)</a>
+                                <a href="" class="nav-link newPtntStmnt">New Patient List</a>
+                                <a href="" class="nav-link SrvceChrgStmnt">Service Charge Statement</a>
+                                <a href="" class="nav-link oldPtntStmnt">Old Patient List</a>
+                                @*<a href="" data-toggle="modal" data-target="#refundStmnts" class="nav-link">Refund Statements</a>*@
+                                @*<a href="" data-toggle="modal" data-target="#DctrVisit" class="nav-link">Doctors List(Visit)</a>
+                                    <a href="" data-toggle="modal" data-target="#newPtntStmnt" class="nav-link">New Patient List</a>
+                                    <a href="" data-toggle="modal" data-target="#SrvceChrgStmnt" class="nav-link">Service Charge Statement</a>
+                                    <a href="" data-toggle="modal" data-target="#oldPtntStmnt" class="nav-link">Old Patient List</a>*@
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#creditclcnstmnts" onclick="toggle_visibility('menu2');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#creditclcnstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Credit Collection Statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu2" style="height: 350px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" data-toggle="modal" data-target="#crWiseClctn" class="nav-link">Credit CardWise Collection</a>
+                                <a href="" data-toggle="modal" data-target="#insrnceWiseClctn" class="nav-link">Insurance Wise Collection</a>
+                                <a href="" data-toggle="modal" data-target="#corpInv" class="nav-link">Corporate Invoice</a>
+                                <a href="" data-toggle="modal" data-target="#corpCollSmry" class="nav-link">Corporate Collection Summary</a>
+                                <a href="" data-toggle="modal" data-target="#corpCollSmryDiv" class="nav-link">Corporate Collection Summary(Division)</a>
+                                <a href="" data-toggle="modal" data-target="#corpOutStndng" class="nav-link">Corporate Outstanding</a>
+                                <a href="" data-toggle="modal" data-target="#corpDivPerfmnce" class="nav-link">Corporate Division Perfomance</a>
+                                <a href="" data-toggle="modal" data-target="#corpTstPrfmnce" class="nav-link">Corporate Test Perfomance</a>
+                                <a href="" data-toggle="modal" data-target="#BillWiseClctn" class="nav-link">Billwise Collection Statements</a>
+                                <a href="" data-toggle="modal" data-target="#BillWiseDue" class="nav-link">Billwise Due Statements</a>
+                                <a href="" data-toggle="modal" data-target="#corpPendColl" class="nav-link">Corporate Wise Pending Collection</a>
+                                <a href="" data-toggle="modal" data-target="#areaWsSmry" class="nav-link">Area Wise Summary</a>
+                                <a href="" data-toggle="modal" data-target="#corpMnthSmry" class="nav-link">Corporate Bill Monthly Summary</a>
+                                <a href="" data-toggle="modal" data-target="#corpMnDetStmnt" class="nav-link">Corporate Monthly Detailed Statements</a>
+                                <a href="" data-toggle="modal" data-target="#corpDctrStmnt" class="nav-link">Corporate Doctor Statements</a>
+                                <a href="" data-toggle="modal" data-target="#corpAgntRpt" class="nav-link">Corporate Agent Reports</a>
+                                <a href="" data-toggle="modal" data-target="#corpDepStmnts" class="nav-link">Corporate Department Statements</a>
+                                <a href="" data-toggle="modal" data-target="#CorpTstAreaWise" class="nav-link">Corporate Test Perfomance Area Wise</a>
+                                <a href="" data-toggle="modal" data-target="#CorpBillDet" class="nav-link">Corporate Bill Detailed</a>
+                                <a href="" data-toggle="modal" data-target="#agntCorpStmnt" class="nav-link">Agent Corporate</a>
+                                <a href="" data-toggle="modal" data-target="#crLimitStmnt" class="nav-link">Credit Limit Statements</a>
+                                @*<a href="" class="nav-link" style="font-weight:bold">BHIM/UPI Online Payment Report</a>
+                                    <a href="" class="nav-link" style="font-weight:bold">Corporate Invoice 2</a>*@
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#cashduestmnts" onclick="toggle_visibility('menu3');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#cashduestmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Cash Due/Pending Statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu3" style="will-change: transform; display:none;position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" data-toggle="modal" data-target="#pndRgstr" class="nav-link">Pending Register</a>
+                                <a href="" data-toggle="modal" data-target="#pndRgstr2" class="nav-link">Pending Register2</a>
+                                <a href="" data-toggle="modal" data-target="#pndClctnReg" class="nav-link">Pending Collection Register</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#DRrefbystmnts" onclick="toggle_visibility('menu4');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#DRrefbystmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Doctor/Ref.by Statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu4" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" data-toggle="modal" data-target="#docWiseClctn" class="nav-link">Doctor Wise Collection</a>
+                                <a href="" data-toggle="modal" data-target="#docPrfmnce" class="nav-link">Doctors Perfomance</a>
+                                <a href="" data-toggle="modal" data-target="#docSplzdLst" class="nav-link">Doctors Specialized List</a>
+                                <a href="" data-toggle="modal" data-target="#hospWiseDocStmnt" class="nav-link">Hospital Wise Doctors List</a>
+                                <a href="" data-toggle="modal" data-target="#docEnvelop" class="nav-link">Doctors Envelop</a>
+                                <a href="" data-toggle="modal" data-target="#outDrWiseClctn" class="nav-link">Out Doctors Wise Collection</a>
+                                <a href="" data-toggle="modal" data-target="#areaWiseDrList" style="display:none" class="nav-link">AreaWiseDrList</a>
+                                <a href="" class="nav-link" style="display:none">drtestperfomance2</a>
+                                <a href="" data-toggle="modal" data-target="#NoDrPatLst" class="nav-link">NO Dr Patient Test</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#technicalstmnts" onclick="toggle_visibility('menu5');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#technicalstmnts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Technical statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu5" style="height: 280px; will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" data-toggle="modal" data-target="#refLabRpt" style="display:none" class="nav-link">Referal Lab</a>
+                                <a href="" data-toggle="modal" data-target="#removeAuthStmnts" class="nav-link">Remove Authorization Statements</a>
+                                <a href="" data-toggle="modal" data-target="#rptDispStmnts" class="nav-link">Report Dispatching Statements</a>
+                                <a href="" data-toggle="modal" data-target="#SmplClctnInv" class="nav-link">Sample Collection/Agent Wise Invoices</a>
+                                <a href="" data-toggle="modal" data-target="#rptDisp2" class="nav-link">Report Dispatching 2</a>
+                                <a href="" data-toggle="modal" data-target="#timeOvrStmnt" class="nav-link">Time Over Statements</a>
+                                <a href="" data-toggle="modal" data-target="#authDls" class="nav-link">Authorization Details</a>
+                                <a href="" data-toggle="modal" data-target="#cust2RsltReg" class="nav-link">Customize2 Result Register</a>
+                                <a href="" data-toggle="modal" data-target="#nonBarcodedTsts" class="nav-link">Non Barcoded Tests</a>
+                                <a href="" data-toggle="modal" data-target="#IPOPrpt" class="nav-link">IP/OP Wise Report</a>
+                                <a href="" class="nav-link">Testwise Result Register</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#teststatements" onclick="toggle_visibility('menu6');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#teststatements" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Test Statements <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu6" style="height: 250px; overflow-y: scroll;will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" data-toggle="modal" data-target="#tstWiseInvce" class="nav-link">Test Wise Invoices</a>
+                                <a href="" data-toggle="modal" data-target="#tstPrfmnce" class="nav-link">Test Perfomance</a>
+                                <a href="" data-toggle="modal" data-target="#tstPrDivWise" class="nav-link">Test Perfomance(Division Wise)</a>
+                                <a href="" data-toggle="modal" data-target="#MulTstInvoice" class="nav-link">Multiple Teat Wise Invoices</a>
+                                <a href="" data-toggle="modal" data-target="#PatTstWise" class="nav-link">Test Wise Patients</a>
+                                <a href="" class="nav-link">Outside Test Statements</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Doctor Wise Test Perfomance</a>
+                                <a href="" class="nav-link" style="font-weight:bold">op patient graph report</a>
+                                <a href="" class="nav-link" style="font-weight:bold">pro dr income report</a>
+                                <a href="" class="nav-link" style="font-weight:bold">collectioboyincome</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Proincme</a>
+                                <a href="" class="nav-link" style="font-weight:bold">clientlabindvl</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Ptient Details</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    @*<a href="" class="nav-link">Master Values</a>*@
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#mastervalues" onclick="toggle_visibility('menu7');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#mastervalues" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Master Values <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu7" style="will-change: transform;display:none; position: absolute; transform: translate3d(285px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                                <a href="" class="nav-link">Test Price List</a>
+                                <a href="" class="nav-link">Test Detailed</a>
+                                <a href="" class="nav-link">Doctors List</a>
+                                <a href="" class="nav-link">Test Detailed(Perform Wise)</a>
+                                <a href="" class="nav-link">Corporate List</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Doctors List Categorywise</a>
+                                <a href="" class="nav-link" style="font-weight:bold">dr payment</a>
+                                <a href="" class="nav-link" style="font-weight:bold">authorization payment</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Pending Statemnts</a>
+                                <a href="" class="nav-link" style="font-weight:bold">Covid Result Statement</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    @*<a href="" class="nav-link">Accounts</a>*@
+                    <ul class="nav nav-pills nav-sidebar flex-column site-menu-sub" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item dropright site-menu-item">
+                            <a href="#" onclick="toggle_visibility('menu8');" id="sub" class="nav-link" data-toggle="dropdown" data-target="#accounts" @*aria-haspopup="true"*@ aria-expanded="true">
+
+                                <p id="sub">Accounts <i class="right fas fa-chevron-right"></i></p>
+                            </a>
+                            <div class="dropdown-menu " id="menu8" style="transform: translate3d(285px, 0px, 0px); display:none;top: 0px; left: 0px;">
+                                <a href="" class="nav-link">Cash Payments</a>
+                                <a href="" class="nav-link">Cash Payments Summary</a>
+                                <a href="" class="nav-link">Cash Receipts</a>
+                                <a href="" class="nav-link">Cash Receipts Summary</a>
+                                <a href="" class="nav-link">Ledger</a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            @**********************************@
+            <li class="nav-item dropright ">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>Marketing <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">PRO Hospital Wise</a>
+                    <a href="" class="nav-link">PRO Specialized Wise</a>
+                    <a href="" class="nav-link">Doctors List(No Buissiness)</a>
+                    <a href="" class="nav-link">Doctor Wise Monthly Summary</a>
+                    <a href="" class="nav-link">Monthly Incentive Statements</a>
+                    <a href="" class="nav-link">Set Dr Incentive</a>
+                    <a href="" class="nav-link">Monthly Incentice</a>
+                    <a href="" class="nav-link">Monthly Incentice(DateWise)</a>
+                    <a href="" class="nav-link">Incentive(Division)</a>
+                    <a href="" class="nav-link">Set Dr IncenticeTest</a>
+                    <a href="" class="nav-link">Receiving sample</a>
+                </div>
+            </li>
+            <li class="nav-item dropright " style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <p>Administrator <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+
+                    @*******************************************@
+                    <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        @*<i class="nav-icon fas fa-th"></i>*@
+                        <p>User Settings <i class="right fas fa-chevron-right"></i></p>
+                    </a>
+                    <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(170px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                        <a href="" class="nav-link">Create New User</a>
+                        <a href="" class="nav-link">Change Password</a>
+                        <a href="" class="nav-link">User Privilege</a>
+                        <a href="" class="nav-link">Users List</a>
+                    </div>
+
+
+                    @*******************************************@
+                    <a href="" class="nav-link">User Logins</a>
+                    <a href="" class="nav-link">Edited Invoice</a>
+                    <a href="" class="nav-link">Edit Discount</a>
+                    <a href="" class="nav-link">Email Configuration</a>
+                    <a href="" class="nav-link">Create New Finanacial Year</a>
+                    <a href="" class="nav-link">Settings</a>
+                    <a href="" class="nav-link">Remove Barcode Data</a>
+                    <a href="" class="nav-link">Agent Wise Incentive</a>
+                    <a href="" class="nav-link">Convert Invoice</a>
+                    <a href="" class="nav-link">Merge Accounts</a>
+                    <a href="" class="nav-link">Result Letter Head</a>
+                </div>
+            </li>
+            <li class="nav-item dropright " style="display:none">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <p>Master Settings <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="height: 580px; overflow-y: scroll;will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">Test</a>
+                    <a href="" class="nav-link">Doctor</a>
+                    <a href="" class="nav-link">Doctor Schedule</a>
+                    <a href="" class="nav-link">Doctor's Leave</a>
+                    <a href="" class="nav-link">Hospital</a>
+                    <a href="" class="nav-link">Agent</a>
+                    <a href="" class="nav-link">Patient</a>
+                    <a href="" class="nav-link">Employee</a>
+                    <a href="" class="nav-link">Antibiotic</a>
+                    <a href="" class="nav-link">Look Up Entry</a>
+                    <a href="" class="nav-link">Appoinment Session</a>
+                    <a href="" class="nav-link">Set customize1</a>
+                    <a href="" class="nav-link">Set customize2</a>
+                    <a href="" class="nav-link">Set customize3</a>
+                    <a href="" class="nav-link">Set customize4</a>
+                    <a href="" class="nav-link">Set Culture</a>
+                    <a href="" class="nav-link">Set Test Order</a>
+                    <a href="" class="nav-link">Set Antibiotic Order</a>
+                    <a href="" class="nav-link">Set Special Rate</a>
+                    <a href="" class="nav-link">Set Result Template</a>
+                    <a href="" class="nav-link">Contacts</a>
+                    <a href="" class="nav-link">Set Doctor Payments</a>
+                    <a href="" class="nav-link">Assign Study To Doctor</a>
+                    <a href="" class="nav-link">Analyzer</a>
+                    <a href="" class="nav-link">Set Corporate</a>
+                    <a href="" class="nav-link">Set Analyzer Normal Range</a>
+                    <a href="" class="nav-link">Set Doctor</a>
+                    <a href="" class="nav-link">PRO Daily Report</a>
+                    <a href="" class="nav-link">Set Doctor Signature</a>
+                    <a href="" class="nav-link">Members</a>
+                </div>
+            </li>
+            <li class="nav-item dropright ">
+                <a href="#" id="cng" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    @*<i class="nav-icon fas fa-th"></i>*@
+                    <i class="nav-icon fas fa-question-circle"></i>
+                    <p>Help <i class="right fas fa-chevron-right"></i></p>
+                </a>
+                <div class="dropdown-menu " style="will-change: transform; position: absolute; transform: translate3d(234px, 0px, 0px); top: 0px; left: 0px;" x-placement="right-start">
+                    <a href="" class="nav-link">About Us</a>
+                    <a href="" class="nav-link" style="display:none">Settings</a>
+                    <a href="" class="nav-link" style="display:none">Barcode</a>
+
+                </div>
+            </li>
+            <li class="nav-item ">
+                <a href="/InvoiceRegister/IvoiceRegistration" class="nav-link">
+                    <i class="nav-icon far fa-plus-square"></i>
+                    <p>Inv. Registration</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="/MasterTestDetails/MasterTestDetail" class="nav-link">
+                    <i class="nav-icon far fa-newspaper"></i>
+                    <p>Test</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    @*<i class="nav-icon fas fa-qrcode"></i>*@
+                    <i class="nav-icon fas fa-barcode"></i>
+                    <p>Barcode/Labeling</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#accountledger" data-backdrop="static" data-keyboard="false" id="accountledgload" @*onclick="focusMethod()"*@>
+                    <i class="nav-icon far fa-newspaper"></i>
+                    <p>Account Ledger</p>
+                </a>
+
+            </li>
+
+            <li class="nav-item ">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#HospitalModal" data-backdrop="static" data-keyboard="false" id="hospitalload">
+
+                    <i class="nav-icon fas fa-hospital-alt"></i>
+                    <p>Hospital</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#employeeModal" data-backdrop="static" data-keyboard="false" id="employeeload">
+
+                    <i class="nav-icon fas fa-user-friends "></i>
+                    <p>Employee</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#CreateuserModal" data-backdrop="static" data-keyboard="false" id="createuserload">
+
+                    <i class="nav-icon fas fa-user-plus "></i>
+                    <p>Create User</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#lookupentry" data-backdrop="static" data-keyboard="false" id="lookupload">
+
+                    <i class="nav-icon far fa-address-book "></i>
+                    <p>LookUpEntry</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-microscope"></i>
+                    <p>Pending Collection</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-poll"></i>
+                    <p>Result Releasing</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-money-bill-alt"></i>
+                    <p>Payments</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-cash-register"></i>
+                    <p>Cash Closing</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-calculator"></i>
+                    <p>Calculator</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-calendar-check"></i>
+                    <p>Appointment</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-comment-dots"></i>
+                    <p>Chat/Alerts</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-house-user"></i>
+                    <p>Home Collection</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-envelope-open"></i>
+                    <p>Email List</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-bell"></i>
+                    <p>Alarm</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-newspaper"></i>
+                    <p>News & Events</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-user-circle"></i>
+                    <p>About Us</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                    <p>Exit</p>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+</div>
+
+        

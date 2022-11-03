@@ -1,0 +1,100 @@
+﻿@{
+    @*@model LISFYPlatinumInvRegistration.Models.accountledgercs*@
+    Layout = "~/Views/Shared/_account.cshtml";
+}
+
+
+<div class="modal" id="lookupentry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-popup modal-large" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Look Up Entry</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-bg-div">
+                    <div class="row">
+                        <div class="col-lg-4" id="treeviewlookup">
+                            <table class="table-responsive test-table" id="lookuptb" style="width: 200px;height:500px">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" style="width: 100px;text-align:center" id="masters">Masters</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="table-responsive firstauth-table">
+                                <table class="table-responsive test-table" id="getlookup" style="height:400px">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width:150px;height:20px">S.N</th>
+                                            <th scope="col" style="width:150px">Code</th>
+                                            <th scope="col" style="width:150px">Name</th>
+                                            <th scope="col" style="width:150px">Details</th>
+                                            <th scope="col" style="width:160px">Value</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="height:20px">1</td>
+                                            <td style="height:20px"></td>
+                                            <td style="height:20px"></td>
+                                            <td style="height:20px"></td>
+                                            <td style="height:20px"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="row lookup-form">
+                                <div class="col-lg-4">
+                                    <div class="field-item">
+                                        <label for="">Code</label>
+                                        <input type="text" id="Mstr_key" style="display:none" required="" class="fcs">
+                                        <input type="text" id="codes" style="width:70px">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="field-item">
+                                        <label for="" style="margin-left:50px">Name</label>
+                                        <input type="text" id="names" class="fcs">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="field-item">
+                                        <label for="">Details</label>
+                                        <textarea name="" id="detailss" cols="30" rows="10" class="fcs"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="field-item">
+                                        <label for="">Value</label>
+                                        <input type="text" id="values" class="fcs">
+                                        <input type="text" id="mastertype" style="display:none">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="bleu-btn" id="refreshlook"><i class="fas fa-sync"></i> Refresh</button>
+                <button class="submit-btn" id="savelookup"><i class="fas fa-save"></i> Save</button>
+                <button class="submit-btn" id="updatelookup"><i class="fas fa-save"></i>Update</button>
+                <button class="bleu-btn" id="dellookup"><i class="fas fa-calculator"></i> Delete</button>
+                @*<button class="bleu-btn"><i class="far fa-trash-alt"></i>Print</button>*@
+                <button class="bleu-btn"><i class="fas fa-times"></i> Exit</button>
+
+            </div>
+        </div>
+    </div>
+</div>
